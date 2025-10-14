@@ -1,0 +1,196 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "metadata",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\n    component: Button,\n    args: {\n        label: 'My Button',\n        disabled: false,\n        onclick: fn(),\n    },\n    render: ({ label, disabled, onclick, ...args }) => ({\n        props: args,\n        template: `<button ${argsToTemplate(args)} ${disabled ? 'disabled' : ''} (click)=\"${onclick()}\">${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i,\n            },\n        },\n    },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{} satisfies Story"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<StoryComponent>",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "StoryComponent",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 194
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "libs/dma-ui-angular/src/stories/button/button.stories.ts": [
+                {
+                    "name": "metadata",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\n    component: Button,\n    args: {\n        label: 'My Button',\n        disabled: false,\n        onclick: fn(),\n    },\n    render: ({ label, disabled, onclick, ...args }) => ({\n        props: args,\n        template: `<button ${argsToTemplate(args)} ${disabled ? 'disabled' : ''} (click)=\"${onclick()}\">${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{} satisfies Story"
+                }
+            ],
+            "libs/dma-ui-angular/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i,\n            },\n        },\n    },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "libs/dma-ui-angular/src/stories/button/button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<StoryComponent>",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                },
+                {
+                    "name": "StoryComponent",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 194
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "libs/dma-ui-angular/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "metadata",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "StoryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

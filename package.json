@@ -1,0 +1,63 @@
+{
+    "name": "dma-ui-angular",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "ng": "npx ng",
+        "build": "npx ng build",
+        "buid:dev": "npx ng build -c dev",
+        "build-storybook": "npx ng run dma-ui-angular:build-storybook",
+        "storybook": "npx ng run dma-ui-angular:storybook",
+        "test": "npx vitest run -c libs/dma-ui-angular/vite.config.ts",
+        "test:dev": "npx vitest -c libs/dma-ui-angular/vite.config.ts",
+        "test:coverage-reports": "npx vite preview --outDir reports/dma-ui-angular",
+        "lint": "npx ng lint",
+        "format:check": "npx prettier -l .",
+        "format:write": "npx prettier -w ."
+    },
+    "workspaces": [
+        "libs/*"
+    ],
+    "dependencies": {
+        "@angular/cdk": "~20.2.0",
+        "@angular/common": "~20.3.0",
+        "@angular/compiler": "~20.3.0",
+        "@angular/core": "~20.3.0",
+        "@angular/forms": "~20.3.0",
+        "@angular/platform-browser": "~20.3.0",
+        "@angular/router": "~20.3.0",
+        "rxjs": "~7.8.0",
+        "tslib": "~2.8.0"
+    },
+    "devDependencies": {
+        "@analogjs/platform": "~1.21.0",
+        "@analogjs/vite-plugin-angular": "~1.21.0",
+        "@analogjs/vitest-angular": "~1.21.0",
+        "@angular-devkit/build-angular": "~20.3.0",
+        "@angular/build": "~20.3.0",
+        "@angular/cli": "~20.3.0",
+        "@angular/compiler-cli": "~20.3.0",
+        "@compodoc/compodoc": "^1.1.31",
+        "@eslint/js": "~9.37.0",
+        "@storybook/addon-docs": "^9.1.10",
+        "@storybook/addon-onboarding": "^9.1.10",
+        "@storybook/angular": "^9.1.10",
+        "@types/node": "~22.18.0",
+        "@vitest/browser": "~3.2.0",
+        "@vitest/coverage-v8": "~3.2.0",
+        "@vitest/ui": "~3.2.0",
+        "angular-eslint": "~20.4.0",
+        "eslint": "~9.37.0",
+        "eslint-config-prettier": "~10.1.0",
+        "eslint-plugin-prettier": "~5.5.0",
+        "eslint-plugin-storybook": "^9.1.10",
+        "ng-packagr": "~20.3.0",
+        "playwright": "~1.56.0",
+        "prettier": "~3.6.0",
+        "prettier-plugin-organize-imports": "~4.3.0",
+        "storybook": "^9.1.10",
+        "typescript": "~5.9.0",
+        "typescript-eslint": "~8.46.0",
+        "vite-tsconfig-paths": "~5.1.0"
+    }
+}

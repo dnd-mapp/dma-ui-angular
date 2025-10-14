@@ -1,0 +1,37 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+.angular/
+.vite/
+
+reports/
+__screenshots__/
+
+# Node
+/node_modules
+
+# IDEs and editors
+.idea/*
+!.idea/runConfigurations/
+!.idea/dma-web-client.iml
+!.idea/modules.xml
+!.idea/prettier.xml
+!.idea/vcs.xml
+!.idea/watcherTasks.xml
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Certificates, configuration files, and dot env files
+certificate*.pem
+public/config.json
+
+# System files
+.DS_Store
+Thumbs.db
