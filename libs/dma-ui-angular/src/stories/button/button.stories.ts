@@ -1,13 +1,14 @@
 import { Button } from '@dnd-mapp/dma-ui-angular';
+import { ButtonComponent } from '@dnd-mapp/dma-ui-angular';
 import { argsToTemplate, Meta, StoryObj } from '@storybook/angular';
 
-type StoryComponent = Button & {
+type StoryComponent = ButtonComponent & {
     label: string;
     disabled: boolean;
 };
 
 const metadata = {
-    component: Button,
+    component: ButtonComponent,
     args: {
         label: 'My Button',
         disabled: false,

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ButtonHarness, createTestEnvironment } from '@dnd-mapp/dma-ui-angular/test';
-import { Button } from './button';
+import { ButtonComponent } from './button.component';
 
-describe('Button', () => {
+describe('ButtonComponent', () => {
     @Component({
         template: `<button dma-button>My Button</button>`,
-        imports: [Button],
+        imports: [ButtonComponent],
     })
     class TestComponent {}
 
