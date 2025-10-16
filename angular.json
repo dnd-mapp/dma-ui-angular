@@ -33,7 +33,7 @@
                         "configDir": "libs/dma-ui-angular/.storybook",
                         "experimentalZoneless": true,
                         "outputDir": "dist/storybook",
-                        "styles": [],
+                        "styles": ["libs/dma-ui-angular/.storybook/styles.scss"],
                         "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
                     }
                 },
@@ -52,7 +52,7 @@
                         "port": 4100,
                         "sslCert": "certificate.pem",
                         "sslKey": "certificate-key.pem",
-                        "styles": [],
+                        "styles": ["libs/dma-ui-angular/.storybook/styles.scss"],
                         "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
                     }
                 },
