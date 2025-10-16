@@ -11,6 +11,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Danger",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\n    args: {\n        type: ButtonTypes.DANGER,\n    },\n} satisfies Story"
+            },
+            {
                 "name": "metadata",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -18,7 +28,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "{\n    component: Button,\n    args: {\n        label: 'My Button',\n        disabled: false,\n        onclick: fn(),\n    },\n    render: ({ label, disabled, onclick, ...args }) => ({\n        props: args,\n        template: `<button ${argsToTemplate(args)} ${disabled ? 'disabled' : ''} (click)=\"${onclick()}\">${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
+                "defaultValue": "{\n    component: ButtonComponent,\n    decorators: [storyWrapper()],\n    args: {\n        type: DEFAULT_BUTTON_TYPE,\n        label: 'My Button',\n        disabled: false,\n    },\n    argTypes: {\n        type: {\n            control: {\n                type: 'select',\n                labels: {\n                    [ButtonTypes.PRIMARY]: 'Primary',\n                    [ButtonTypes.SECONDARY]: 'Secondary',\n                    [ButtonTypes.DANGER]: 'Danger',\n                    [ButtonTypes.TEXT]: 'Text',\n                },\n            },\n            options: Object.values(ButtonTypes),\n            table: {\n                defaultValue: {\n                    summary: DEFAULT_BUTTON_TYPE,\n                },\n            },\n        },\n    },\n    render: ({ label, disabled, type, ...args }) => ({\n        props: args,\n        template: `<button dma-button=\"${type}\" ${disabled ? 'disabled' : ''}>${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
             },
             {
                 "name": "preview",
@@ -32,6 +42,26 @@
             },
             {
                 "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\n    args: {\n        type: ButtonTypes.PRIMARY,\n    },\n} satisfies Story"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\n    args: {\n        type: ButtonTypes.SECONDARY,\n    },\n} satisfies Story"
+            },
+            {
+                "name": "Text",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
@@ -70,6 +100,16 @@
         "groupedVariables": {
             "libs/dma-ui-angular/src/stories/button/button.stories.ts": [
                 {
+                    "name": "Danger",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\n    args: {\n        type: ButtonTypes.DANGER,\n    },\n} satisfies Story"
+                },
+                {
                     "name": "metadata",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -77,10 +117,30 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "{\n    component: Button,\n    args: {\n        label: 'My Button',\n        disabled: false,\n        onclick: fn(),\n    },\n    render: ({ label, disabled, onclick, ...args }) => ({\n        props: args,\n        template: `<button ${argsToTemplate(args)} ${disabled ? 'disabled' : ''} (click)=\"${onclick()}\">${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
+                    "defaultValue": "{\n    component: ButtonComponent,\n    decorators: [storyWrapper()],\n    args: {\n        type: DEFAULT_BUTTON_TYPE,\n        label: 'My Button',\n        disabled: false,\n    },\n    argTypes: {\n        type: {\n            control: {\n                type: 'select',\n                labels: {\n                    [ButtonTypes.PRIMARY]: 'Primary',\n                    [ButtonTypes.SECONDARY]: 'Secondary',\n                    [ButtonTypes.DANGER]: 'Danger',\n                    [ButtonTypes.TEXT]: 'Text',\n                },\n            },\n            options: Object.values(ButtonTypes),\n            table: {\n                defaultValue: {\n                    summary: DEFAULT_BUTTON_TYPE,\n                },\n            },\n        },\n    },\n    render: ({ label, disabled, type, ...args }) => ({\n        props: args,\n        template: `<button dma-button=\"${type}\" ${disabled ? 'disabled' : ''}>${label}</button>`,\n    }),\n} satisfies Meta<StoryComponent>"
                 },
                 {
                     "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\n    args: {\n        type: ButtonTypes.PRIMARY,\n    },\n} satisfies Story"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\n    args: {\n        type: ButtonTypes.SECONDARY,\n    },\n} satisfies Story"
+                },
+                {
+                    "name": "Text",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
@@ -156,6 +216,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Danger",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "metadata",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -167,6 +237,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/dma-ui-angular/src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Text",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
