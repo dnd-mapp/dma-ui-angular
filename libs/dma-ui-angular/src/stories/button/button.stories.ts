@@ -1,6 +1,7 @@
 import { Button } from '@dnd-mapp/dma-ui-angular';
 import { ButtonComponent } from '@dnd-mapp/dma-ui-angular';
 import { argsToTemplate, Meta, StoryObj } from '@storybook/angular';
+import { storyWrapper } from '../story-wrapper';
 
 type StoryComponent = ButtonComponent & {
     label: string;
@@ -9,6 +10,7 @@ type StoryComponent = ButtonComponent & {
 
 const metadata = {
     component: ButtonComponent,
+    decorators: [storyWrapper()],
     args: {
         label: 'My Button',
         disabled: false,

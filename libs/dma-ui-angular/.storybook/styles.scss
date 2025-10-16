@@ -1,1 +1,58 @@
 @use '../public/styles/main';
+@use '../public/styles/theme-variables' as tv;
+
+.sb-story {
+    background-color: tv.$background;
+    color: tv.$on-background;
+    font-size: tv.$font-size;
+    padding: 1em;
+
+    .dma-surface {
+        display: flex;
+        background-color: tv.$surface;
+        color: tv.$on-surface;
+        padding: 1em;
+        border-radius: 0.5em;
+
+        align-items: center;
+        justify-content: center;
+
+        &.center-start {
+            justify-content: start;
+        }
+
+        &.center-end {
+            justify-content: end;
+        }
+
+        &.top-start {
+            align-items: start;
+            justify-content: start;
+        }
+
+        &.top-center {
+            align-items: start;
+            justify-content: center;
+        }
+
+        &.top-end {
+            align-items: start;
+            justify-content: end;
+        }
+
+        &.bottom-start {
+            align-items: end;
+            justify-content: start;
+        }
+
+        &.bottom-center {
+            align-items: end;
+            justify-content: center;
+        }
+
+        &.bottom-end {
+            align-items: end;
+            justify-content: end;
+        }
+    }
+}
