@@ -32,7 +32,8 @@ First, locate your application's global `styles.scss` (usually in`src/styles.scs
 
 // Import the dma-ui-angular theme.
 // Ensure this path is correct based on your project structure.
-@import '@dnd-mapp/dma-ui-angular/styles/main.scss';
+@use '@dnd-mapp/dma-ui-angular/styles/fonts.scss';
+@use '@dnd-mapp/dma-ui-angular/styles/main.scss';
 
 // Add any application-specific global styles or overrides after the theme
 // import if you need to adjust default theme values.
@@ -50,6 +51,7 @@ Alternatively, you can include the SCSS file directly in your `angular.json`'s `
                     "options": {
                         "styles": [
                             "src/styles.scss",
+                            "node_modules/@dnd-mapp/dma-ui-angular/styles/fonts.scss",
                             "node_modules/@dnd-mapp/dma-ui-angular/styles/main.scss"
                         ],
                         // ...
@@ -72,7 +74,7 @@ This library provides a suite of presentational components. For detailed documen
 
 Components you can find in this library are:
 
-*  [DmaButtonComponent](src/lib/button/README.md)
+*  [DmaButton](src/lib/button/README.md)
 
 ## Theming
 
