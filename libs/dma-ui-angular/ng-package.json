@@ -1,6 +1,12 @@
 {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-    "assets": [],
+    "assets": [
+        {
+            "input": "public",
+            "glob": "**/*",
+            "output": "."
+        }
+    ],
     "deleteDestPath": true,
     "dest": "../../dist/dma-ui-angular",
     "inlineStyleLanguage": "scss",
