@@ -5,7 +5,8 @@
             "input": "public",
             "glob": "**/*",
             "output": "."
-        }
+        },
+        "src/lib/**/README.md"
     ],
     "deleteDestPath": true,
     "dest": "../../dist/dma-ui-angular",
