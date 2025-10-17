@@ -7,7 +7,6 @@
 *   [Installation](#installation)
 *   [Configuration](#configuration)
 *   [Available Components](#available-components)
-*   [Styling](#styling)
 *   [Storybook](#storybook)
 *   [Contribution](#contribution)
 *   [License](#license)
@@ -69,7 +68,7 @@ Specific component configurations will be detailed in their respective documenta
 
 ## Available Components
 
-This library provides a suite of presentational components. For detailed documentation, API references, and usage examples for each specific component, please refer to their individual `README.md` files (typically co-located with the component's source code) or the comprehensive Storybook documentation.
+This library provides a suite of presentational components. For detailed documentation, API references, and usage examples for each specific component, please refer to their individual `README.md` files (typically co-located with the component's source code) or the comprehensive [Storybook](https://dnd-mapp.github.io/dma-ui-angular) documentation.
 
 Components you can find in this library are:
 
@@ -89,8 +88,8 @@ npm run storybook
 
 ## Contribution
 
-If you are looking to contribute to the development of this library, please refer to the main repository's `README.md` and contributing guidelines.
+If you are looking to contribute to the development of this library, please refer to the main repository's [README.md](https://github.com/dnd-mapp/dma-ui-angular/blob/main/README.md) and contributing guidelines.
 
 ## License
 
-This library is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](../../LICENSE).
+This library is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](https://github.com/dnd-mapp/dma-ui-angular/blob/main/LICENSE).
