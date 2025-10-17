@@ -1,10 +1,6 @@
-import { setCompodocJson } from '@storybook/addon-docs/angular';
 import type { Preview } from '@storybook/angular';
-import docJson from '../documentation.json';
 
-setCompodocJson(docJson);
-
-const preview: Preview = {
+const preview = {
     parameters: {
         controls: {
             matchers: {
@@ -13,6 +9,6 @@ const preview: Preview = {
             },
         },
     },
-};
+} satisfies Preview;
 
 export default preview;

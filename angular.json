@@ -28,8 +28,7 @@
                     "options": {
                         "assets": [],
                         "browserTarget": "dma-ui-angular:build",
-                        "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "libs/dma-ui-angular"],
+                        "compodoc": false,
                         "configDir": "libs/dma-ui-angular/.storybook",
                         "experimentalZoneless": true,
                         "outputDir": "dist/storybook",
@@ -42,8 +41,7 @@
                     "options": {
                         "assets": [],
                         "browserTarget": "dma-ui-angular:build",
-                        "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "libs/dma-ui-angular"],
+                        "compodoc": false,
                         "configDir": "libs/dma-ui-angular/.storybook",
                         "experimentalZoneless": true,
                         "host": "localhost.shared-ui.dndmapp.dev",
