@@ -1,7 +1,13 @@
 {
     "name": "dma-ui-angular",
     "version": "0.0.0",
+    "description": "An Angular library containing themed and styled presentational UI components",
     "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dnd-mapp/dma-ui-angular.git"
+    },
+    "license": "AGPL-3.0",
     "scripts": {
         "ng": "npx ng",
         "build": "npx ng build",
