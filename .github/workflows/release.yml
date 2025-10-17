@@ -146,16 +146,6 @@ jobs:
                   ref: main
                   fetch-depth: 0
 
-            - name: Generate GitHub app token
-              id: token
-              uses: actions/create-github-app-token@v2
-              with:
-                  owner: dnd-mapp
-                  repositories: dma-ui-angular
-                  app-id: ${{ secrets.AUTH_APP_ID }}
-                  private-key: ${{ secrets.AUTH_APP_PRIVATE_KEY }}
-                  permission-organization-packages: write
-
             - name: Setup Node.js
               uses: actions/setup-node@v5
               with:
@@ -164,7 +154,6 @@ jobs:
                   cache-dependency-path: "package-lock.json"
                   scope: "@dnd-mapp"
                   registry-url: "https://npm.pkg.github.com"
-                  token: ${{ steps.token.outputs.token }}
 
             - name: Install dependencies
               run: npm ci
@@ -174,7 +163,7 @@ jobs:
 
             - name: Publish
               env:
-                  NODE_AUTH_TOKEN: ${{ steps.token.outputs.token }}
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   cp LICENSE dist/dma-ui-angular/LICENSE
 
