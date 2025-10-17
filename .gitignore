@@ -14,7 +14,8 @@ __screenshots__/
 # IDEs and editors
 .idea/*
 !.idea/runConfigurations/
-!.idea/dma-web-client.iml
+!.idea/jsLinters/
+!.idea/dma-ui-angular.iml
 !.idea/modules.xml
 !.idea/prettier.xml
 !.idea/vcs.xml
