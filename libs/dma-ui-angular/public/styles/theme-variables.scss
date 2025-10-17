@@ -9,3 +9,16 @@ $on-background: var(--on-background, oklch(0.1 0 0));
 
 $surface: var(--surface, oklch(0.99 0 0));
 $on-surface: var(--on-surface, oklch(0.1 0 0));
+
+$primary: var(--primary, oklch(0.6 0.2 250));
+$on-primary: var(--on-primary, oklch(0.98 0 0));
+
+$secondary: var(--secondary, oklch(0.6 0.2 290));
+$on-secondary: var(--on-secondary, oklch(0.98 0 0));
+
+$danger: var(--danger, oklch(0.55 0.2 30));
+$on-danger: var(--on-danger, oklch(0.98 0 0));
+
+$disabled: var(--disabled, oklch(0.75 0 0));
+$on-disabled: var(--on-disabled, oklch(0 0 0));
+$disabled-opacity: var(--disabled-opacity, 0.33);
