@@ -146,14 +146,6 @@ jobs:
                   ref: main
                   fetch-depth: 0
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v5
-              with:
-                  cache: "npm"
-                  node-version-file: ".tool-versions"
-                  cache-dependency-path: "package-lock.json"
-                  scope: "@dnd-mapp"
-
             - name: Generate GitHub app token
               id: token
               uses: actions/create-github-app-token@v2
@@ -162,6 +154,16 @@ jobs:
                   repositories: dma-ui-angular
                   app-id: ${{ secrets.AUTH_APP_ID }}
                   private-key: ${{ secrets.AUTH_APP_PRIVATE_KEY }}
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v5
+              with:
+                  cache: "npm"
+                  node-version-file: ".tool-versions"
+                  cache-dependency-path: "package-lock.json"
+                  scope: "@dnd-mapp"
+                  registry-url: "https://npm.pkg.github.com"
+                  token: ${{ steps.token.outputs.token }}
 
             - name: Install dependencies
               run: npm ci
