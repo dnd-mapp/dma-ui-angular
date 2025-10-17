@@ -11,23 +11,38 @@ const metadata = {
     component: ButtonComponent,
     decorators: [storyWrapper()],
     args: {
-        type: DEFAULT_BUTTON_TYPE,
-        label: 'My Button',
         disabled: false,
+        label: 'My Button',
+        type: DEFAULT_BUTTON_TYPE,
     },
     argTypes: {
+        disabled: {
+            description: 'Inherited from the native button element. Determines whether the button is clickable.',
+            table: {
+                category: 'Properties',
+                defaultValue: {
+                    summary: 'false',
+                },
+            },
+        },
+        label: {
+            description: 'Provided as content of the button element.',
+            table: {
+                category: 'Content',
+            },
+        },
         type: {
             control: {
                 type: 'select',
-                labels: {
-                    [ButtonTypes.PRIMARY]: 'Primary',
-                    [ButtonTypes.SECONDARY]: 'Secondary',
-                    [ButtonTypes.DANGER]: 'Danger',
-                    [ButtonTypes.TEXT]: 'Text',
-                },
             },
             options: Object.values(ButtonTypes),
+            description: 'Determines the visual representation of the button.',
+            type: {
+                name: 'enum',
+                value: Object.values(ButtonTypes),
+            },
             table: {
+                category: 'Properties',
                 defaultValue: {
                     summary: DEFAULT_BUTTON_TYPE,
                 },
