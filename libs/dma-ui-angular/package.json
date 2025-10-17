@@ -1,6 +1,32 @@
 {
     "name": "@dnd-mapp/dma-ui-angular",
     "version": "0.0.1",
+    "license": "AGPL-3.0",
+    "description": "An Angular library containing themed and styled presentational UI components",
+    "author": {
+        "email": "mail.dndmapp@gmail.com",
+        "name": "NoNamer777"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dnd-mapp/dma-ui-angular.git",
+        "directory": "libs/dma-ui-angular"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "files": [
+        "**/*"
+    ],
+    "exports": {
+        "./styles/*": {
+            "sass": "./styles/*"
+        }
+    },
+    "main": "fesm2022/dma-ui-angular.mjs",
+    "module": "fesm2022/dma-ui-angular.mjs",
+    "es2022": "fesm2022/dma-ui-angular.mjs",
+    "typings": "index.d.ts",
     "sideEffects": false,
     "peerDependencies": {
         "@angular/cdk": "~20.2.0",
