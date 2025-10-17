@@ -154,6 +154,7 @@ jobs:
                   repositories: dma-ui-angular
                   app-id: ${{ secrets.AUTH_APP_ID }}
                   private-key: ${{ secrets.AUTH_APP_PRIVATE_KEY }}
+                  permission-organization-packages: write
 
             - name: Setup Node.js
               uses: actions/setup-node@v5
