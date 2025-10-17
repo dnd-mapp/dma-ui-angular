@@ -1,0 +1,7 @@
+@function hover($color) {
+    @return oklch(from $color calc(l - 0.05) c h);
+}
+
+@function active($color) {
+    @return oklch(from $color calc(l - 0.08) c h);
+}
