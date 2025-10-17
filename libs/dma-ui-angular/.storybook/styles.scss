@@ -2,9 +2,12 @@
 @use '../public/styles/theme-variables' as tv;
 
 .sb-story {
+    font-family: tv.$font-family;
+    font-size: tv.$font-size;
+
     background-color: tv.$background;
     color: tv.$on-background;
-    font-size: tv.$font-size;
+
     padding: 1em;
 
     .dma-surface {

@@ -1,5 +1,6 @@
 @use '@angular/cdk/overlay-prebuilt.css';
 @use './theme-variables' as tv;
+@use './fonts';
 
 * {
     margin: 0;
@@ -10,5 +11,6 @@ html,
 body {
     background-color: tv.$background;
     color: tv.$on-background;
+    font-family: tv.$font-family;
     font-size: tv.$font-size;
 }
