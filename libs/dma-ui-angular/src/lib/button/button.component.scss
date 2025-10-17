@@ -4,5 +4,7 @@
     display: inline-block;
     border: none;
     background-color: transparent;
+    font-family: inherit;
     font-size: inherit;
+    font-weight: styles.$fw-bold;
 }
