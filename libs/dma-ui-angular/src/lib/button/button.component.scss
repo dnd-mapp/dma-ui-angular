@@ -3,8 +3,75 @@
 :host {
     display: inline-block;
     border: none;
-    background-color: transparent;
     font-family: inherit;
     font-size: inherit;
     font-weight: styles.$fw-bold;
+    padding: 0.5em 1.5em;
+    border-radius: 0.4em;
+
+    background-color: styles.$surface;
+    color: styles.$on-surface;
+
+    &:hover {
+        cursor: pointer;
+        background-color: styles.hover(styles.$surface);
+    }
+
+    &:active {
+        background-color: styles.active(styles.$surface);
+    }
+
+    &[dma-button='primary'] {
+        background-color: styles.$primary;
+        color: styles.$on-primary;
+
+        &:hover {
+            background-color: styles.hover(styles.$primary);
+        }
+
+        &:active {
+            background-color: styles.active(styles.$primary);
+        }
+    }
+
+    &[dma-button='secondary'] {
+        background-color: styles.$secondary;
+        color: styles.$on-secondary;
+
+        &:hover {
+            background-color: styles.hover(styles.$secondary);
+        }
+
+        &:active {
+            background-color: styles.active(styles.$secondary);
+        }
+    }
+
+    &[dma-button='danger'] {
+        background-color: styles.$danger;
+        color: styles.$on-danger;
+
+        &:hover {
+            background-color: styles.hover(styles.$danger);
+        }
+
+        &:active {
+            background-color: styles.active(styles.$danger);
+        }
+    }
+
+    &:disabled {
+        background-color: styles.$disabled;
+        color: styles.$on-disabled;
+        opacity: styles.$disabled-opacity;
+
+        &:hover {
+            background-color: styles.$disabled;
+            cursor: default;
+        }
+
+        &:active {
+            background-color: styles.$disabled;
+        }
+    }
 }
