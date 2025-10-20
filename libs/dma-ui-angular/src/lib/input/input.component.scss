@@ -1,0 +1,38 @@
+@use '../../styles';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+
+    label {
+        display: inline-block;
+        background-color: styles.$surface;
+        color: styles.$on-surface;
+        font-size: 90%;
+    }
+
+    input {
+        display: block;
+        font-family: inherit;
+        font-size: inherit;
+        outline: none;
+        border: solid styles.$border-color 0.0625em;
+        padding: 0.3em;
+        border-radius: 0.33em;
+        background-color: styles.$surface;
+        color: styles.$on-surface;
+
+        &:hover,
+        &:focus {
+            border-color: styles.$on-surface;
+        }
+
+        &:disabled {
+            border-color: styles.$disabled;
+            background-color: styles.$disabled;
+            color: styles.$on-disabled;
+            opacity: styles.$disabled-opacity;
+        }
+    }
+}
