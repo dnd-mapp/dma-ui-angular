@@ -5,6 +5,13 @@
         "analytics": "a888cfd9-a542-4e54-ba23-b2a73f08912a",
         "schematicCollections": ["angular-eslint"]
     },
+    "schematics": {
+        "@schematics/angular:component": {
+            "changeDetection": "OnPush",
+            "style": "scss",
+            "type": "component"
+        }
+    },
     "projects": {
         "dma-ui-angular": {
             "projectType": "library",

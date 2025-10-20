@@ -8,8 +8,6 @@ type StoryComponent = ButtonComponent & {
 };
 
 const metadata = {
-    component: ButtonComponent,
-    decorators: [storyWrapper()],
     args: {
         disabled: false,
         label: 'My Button',
@@ -49,10 +47,13 @@ const metadata = {
             },
         },
     },
+    component: ButtonComponent,
+    decorators: [storyWrapper()],
     render: ({ label, disabled, type, ...args }) => ({
         props: args,
         template: `<button dma-button="${type}" ${disabled ? 'disabled' : ''}>${label}</button>`,
     }),
+    title: 'Button',
 } satisfies Meta<StoryComponent>;
 
 export default metadata;
