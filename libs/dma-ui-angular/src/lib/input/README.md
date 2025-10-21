@@ -19,6 +19,12 @@ The `InputComponent` is a presentational, standalone Angular component that prov
 
 ## Installation
 
+First, ensure you have installed the `@dnd-mapp/dma-ui-angular` library in your Angular project:
+
+```bash
+npm install @dnd-mapp/dma-ui-angular
+```
+
 As a standalone component, you can import `InputComponent` directly into your component's `imports` array without needing an Angular module.
 
 ```typescript

@@ -4,9 +4,10 @@ The `ButtonComponent` is a presentational component provided by the `@dnd-mapp/d
 
 ## Features
 
-*   **Directive-based:** Extends the native `<button>` element using the `dma-button` attribute selector.
-*   **Visual Types:** Supports various visual styles through the `type` input.
-*   **Standalone:** Can be imported and used directly in your Angular components without the need for Angular modules.
+*  **Directive-based:** Extends the native `<button>` element using the `dma-button` attribute selector.
+*  **Visual Types:** Supports various visual styles through the `type` input.
+*  **Icon Support:** Easily add leading, trailing, or standalone icons to buttons.
+*  **Standalone:** Can be imported and used directly in your Angular components without the need for Angular modules.
 
 ## Installation
 
@@ -60,6 +61,48 @@ Here are some common ways to use the `ButtonComponent`:
 <button dma-button>Click Me</button>
 ```
 
+## Icons
+
+The `ButtonComponent` provides flexible ways to integrate icons into your buttons, whether you need them to lead or trail the button's text, or if you want a button composed solely of an icon.
+
+### Leading Icon
+
+To render an icon before the button's label, use `ngProjectAs="dma-leading-icon"` on your icon element.
+
+```html
+<button dma-button="primary">
+    <dma-icon dma-so-plus-icon ngProjectAs="dma-leading-icon" />
+    New Character
+</button>
+```
+
+### Trailing Icon
+
+To render an icon after the button's label, use `ngProjectAs="dma-trailing-icon"` on your icon element.
+
+```html
+<button dma-button="secondary">
+    Open link
+    <dma-icon dma-so-arrow-up-right-from-square-icon ngProjectAs="dma-trailing-icon" />
+</button>
+```
+
+### Icon Button
+
+To create a button composed solely of an icon, add the `iconButton` attribute on the button element. In this configuration, any singular icon provided as content will be rendered, and no button label is required.
+
+```html
+<button dma-button="primary" iconButton>
+    <dma-icon dma-so-xmark-icon />
+</button>
+
+<button dma-button="danger" iconButton>
+    <dma-icon dma-so-trash-icon />
+</button>
+```
+
+**Note:** Only icons included in this Angular library are supported.
+
 ## API
 
 ### `button[dma-button]` Selector
@@ -68,16 +111,10 @@ The component is applied as a directive to the native `<button>` element using t
 
 ### Inputs
 
-| Name         | Type                                                          | Description                             | Default |
-|--------------|---------------------------------------------------------------|-----------------------------------------|---------|
-| `dma-button` | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button. | `text`  |
+| Name         | Type                                                          | Description                                                                                                           | Default |
+|--------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------|
+| `dma-button` | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button.                                                                               | `text`  |
+| `iconButton` | `boolean`                                                     | When `true`, the button is styled as an icon-only button. Renders a single icon and no button label will be rendered. | `false` |
 
-*   **`dma-button`**: This input determines the visual appearance of the button. The library provides built-in styles for types like `'primary'`, `'secondary'`, `'text' (default)`, and `'danger'`. You can also potentially define custom styles for other string values if your library's CSS supports it.
-
-## Contribution
-
-For information on contributing to the `dnd-mapp/dma-ui-angular` library, please refer to the main repository's [CONTRIBUTING.md](https://github.com/dnd-mapp/dma-ui-angular/blob/main/CONTRIBUTING.md) file.
-
-## License
-
-This component is part of the `dnd-mapp/dma-ui-angular` library, which is released under the [AGPL-3.0 License](https://github.com/dnd-mapp/dma-ui-angular/blob/main/LICENSE).
+*   **`dma-button`**: This input determines the visual appearance of the button. The library provides built-in styles for types like `'primary'`, `'secondary'`, `'text' (default)`, and `'danger'`.
+*   **`iconButton`**: Use this input to explicitly define the button as an icon-only button. When `true`, the component only render the first icon.

@@ -1,3 +1,9 @@
 <div class="button-contents">
-    <ng-content />
+    @if (iconButton()) {
+        <ng-content select="dma-icon" />
+    } @else {
+        <ng-content select="dma-leading-icon" />
+        <ng-content select=":not(dma-icon)" />
+        <ng-content select="dma-trailing-icon" />
+    }
 </div>
