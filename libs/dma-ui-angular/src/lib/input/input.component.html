@@ -1,13 +1,16 @@
 @if (!hideLabel()) {
     <label>{{ label() }}</label>
 }
-<input
-    type="text"
-    #input
-    [disabled]="isDisabled()"
-    [placeholder]="placeholder()"
-    [readonly]="isReadonly()"
-    [value]="inputValue()"
-    (focus)="onBlur()"
-    (change)="onValueChange(input.value)"
-/>
+<div class="input-container">
+    <ng-content select="dma-leading-icon" />
+    <input
+        type="text"
+        #input
+        [disabled]="isDisabled()"
+        [placeholder]="placeholder()"
+        [readonly]="isReadonly()"
+        [value]="inputValue()"
+        (focus)="onBlur()"
+        (change)="onValueChange(input.value)"
+    />
+</div>

@@ -12,27 +12,51 @@
         font-size: 90%;
     }
 
-    input {
-        display: block;
-        font-family: inherit;
-        font-size: inherit;
-        outline: none;
+    .input-container {
+        display: flex;
+        align-items: center;
         border: solid styles.$border-color 0.0625em;
-        padding: 0.3em;
         border-radius: 0.33em;
         background-color: styles.$surface;
         color: styles.$on-surface;
 
-        &:hover,
-        &:focus {
-            border-color: styles.$on-surface;
+        input {
+            display: inline-block;
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border-radius: 0.33em;
+            border: none;
+            background-color: styles.$surface;
+            color: styles.$on-surface;
+            padding: 0.3em;
         }
 
-        &:disabled {
+        &:has(dma-icon) input {
+            border-left: 0.0625em solid styles.$border-color;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        &:hover,
+        &:has(input:focus) {
+            border-color: styles.$on-surface;
+
+            input {
+                border-color: styles.$on-surface;
+            }
+        }
+
+        &:has(input:disabled) {
             border-color: styles.$disabled;
             background-color: styles.$disabled;
             color: styles.$on-disabled;
             opacity: styles.$disabled-opacity;
+
+            input {
+                background-color: styles.$disabled;
+                color: styles.$on-disabled;
+            }
         }
     }
 }

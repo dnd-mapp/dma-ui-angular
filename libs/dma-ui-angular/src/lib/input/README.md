@@ -1,21 +1,20 @@
 # InputComponent
 
-The `InputComponent` is a presentational, standalone Angular component that
-provides a flexible and accessible input field with an associated label. It's
-designed for use within Angular applications and integrates seamlessly with
-Angular's reactive and template-driven forms.
+The `InputComponent` is a presentational, standalone Angular component that provides a flexible input field with an associated label. It's designed for use within Angular applications and integrates seamlessly with Angular's reactive and template-driven forms.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
     - [Basic Usage](#basic-usage)
+    - [Leading Icon](#leading-icon)
     - [Disabled Input](#disabled-input)
     - [Readonly Input](#readonly-input)
     - [Hidden Label](#hidden-label)
 - [API](#api)
     - [Inputs](#inputs)
     - [Outputs](#outputs)
+    - [Content Projection Slots](#content-projection-slots)
 - [Forms Integration](#forms-integration)
 
 ## Installation
@@ -56,15 +55,25 @@ import { Component } from '@angular/core';
 import { InputComponent } from '@dnd-mapp/dma-ui-angular';
 
 @Component({
-    selector: 'app-your',
+    selector: 'app-my',
     template: `<dma-input label="Search Query" (change)="onInputChange($event)" />`,
     imports: [InputComponent],
 })
-class YouComponent {
+class MyComponent {
     protected onInputChange(newValue: string) {
         console.log('Input value changed:', newValue);
     }
 }
+```
+
+### Leading Icon
+
+You can project a leading icon into the input component using the `dma-leading-icon` content projection slot. This is useful for adding visual context or functionality, such as a search icon or an email icon.
+
+```html
+<dma-input label="Username">
+    <dma-icon dma-so-user-icon ngProjectAs="dma-leading-icon" />
+</dma-input>
 ```
 
 ### Disabled Input
@@ -109,6 +118,12 @@ The label can be hidden in case it isn't required.
 | Name      | Type                    | Description                                                                     |
 |-----------|-------------------------|---------------------------------------------------------------------------------|
 | `change`  | `EventEmitter<string>`  | Emits the current value of the input whenever the native `change` event occurs. |
+
+### Content Projection Slots
+
+| Selector           | Description                                                                  |
+|--------------------|------------------------------------------------------------------------------|
+| `dma-leading-icon` | Content projected here will appear as a leading icon within the input field. |
 
 ## Forms Integration
 
