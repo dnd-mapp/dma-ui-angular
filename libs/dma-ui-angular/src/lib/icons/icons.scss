@@ -1,0 +1,23 @@
+@use '../../styles';
+
+:host {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1em;
+
+    svg {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    dma-input &:first-of-type {
+        color: styles.$border-color;
+        margin: 0.3em;
+    }
+
+    .input-container:hover &,
+    .input-container:has(input:focus) & {
+        color: styles.$on-surface;
+    }
+}

@@ -27,7 +27,7 @@ export default defineConfig(() => ({
             clean: true,
             cleanOnRerun: true,
             enabled: true,
-            exclude: ['**/index.ts'],
+            exclude: ['**/index.ts', 'src/stories/**/*'],
             include: ['src/**/*.ts'],
             provider: 'v8' as const,
             reporter: ['text-summary', 'html'],
