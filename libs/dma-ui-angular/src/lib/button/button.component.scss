@@ -12,6 +12,21 @@
     background-color: styles.$surface;
     color: styles.$on-surface;
 
+    &:has(dma-icon) {
+        padding-top: 0.444em;
+        padding-bottom: 0.444em;
+    }
+
+    &[iconButton] {
+        padding: 0.444em;
+    }
+
+    .button-contents {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
     &:hover {
         cursor: pointer;
         background-color: styles.hover(styles.$surface);

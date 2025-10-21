@@ -16,6 +16,10 @@
         margin: 0.3em;
     }
 
+    [dma-button] & {
+        font-size: 130%;
+    }
+
     .input-container:hover &,
     .input-container:has(input:focus) & {
         color: styles.$on-surface;
