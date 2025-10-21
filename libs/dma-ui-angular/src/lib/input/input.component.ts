@@ -36,7 +36,7 @@ export class InputComponent implements ControlValueAccessor {
 
     public readonly hideLabel = input(false, { transform: booleanAttribute });
 
-    public readonly placeholder = input<string>();
+    public readonly placeholder = input<string>('');
 
     public readonly value = input<string>('');
 
