@@ -55,8 +55,8 @@ jobs:
 
             - name: Configure git
               run: |
-                  git config user.name "DnD Mapp GitHub Authentication App[bot]"
-                  git config user.email "dnd-mapp-github-authentication-app[bot]@users.noreply.github.com"
+                  git config user.name "DnD Mapp GHA[bot]"
+                  git config user.email "dnd-mapp-gha[bot]@users.noreply.github.com"
 
             - name: Bump version
               id: bump-version
@@ -113,8 +113,8 @@ jobs:
 
             - name: Configure git
               run: |
-                  git config user.name "DnD Mapp GitHub Authentication App[bot]"
-                  git config user.email "dnd-mapp-github-authentication-app[bot]@users.noreply.github.com"
+                  git config user.name "DnD Mapp GHA[bot]"
+                  git config user.email "dnd-mapp-gha[bot]@users.noreply.github.com"
 
             - name: Create and Push git tag
               env:
