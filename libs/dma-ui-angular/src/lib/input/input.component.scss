@@ -9,7 +9,7 @@
         display: inline-block;
         background-color: styles.$surface;
         color: styles.$on-surface;
-        font-size: 90%;
+        font-size: 95%;
     }
 
     .input-container {
@@ -22,6 +22,7 @@
 
         input {
             display: inline-block;
+            flex: 1 1 auto;
             font-family: inherit;
             font-size: inherit;
             outline: none;
@@ -29,7 +30,7 @@
             border: none;
             background-color: styles.$surface;
             color: styles.$on-surface;
-            padding: 0.3em;
+            padding: 0.5em;
         }
 
         &:has(dma-icon) input {
