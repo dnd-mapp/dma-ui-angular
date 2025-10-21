@@ -6,6 +6,7 @@ The `ButtonComponent` is a presentational component provided by the `@dnd-mapp/d
 
 *  **Directive-based:** Extends the native `<button>` element using the `dma-button` attribute selector.
 *  **Visual Types:** Supports various visual styles through the `type` input.
+*  **Sizes:** Configurable sizes (`small` and `medium`) for different contexts.
 *  **Icon Support:** Easily add leading, trailing, or standalone icons to buttons.
 *  **Standalone:** Can be imported and used directly in your Angular components without the need for Angular modules.
 
@@ -61,6 +62,21 @@ Here are some common ways to use the `ButtonComponent`:
 <button dma-button>Click Me</button>
 ```
 
+### Sizes
+
+You can control the physical size of the button using the `size` input.
+
+```html
+<!-- A small primary button -->
+<button dma-button="primary" size="small">Small Action</button>
+
+<!-- A medium secondary button (default size) -->
+<button dma-button="secondary" size="medium">Medium Action</button>
+
+<!-- A default size button -->
+<button dma-button>Click Me</button>
+```
+
 ## Icons
 
 The `ButtonComponent` provides flexible ways to integrate icons into your buttons, whether you need them to lead or trail the button's text, or if you want a button composed solely of an icon.
@@ -111,10 +127,11 @@ The component is applied as a directive to the native `<button>` element using t
 
 ### Inputs
 
-| Name         | Type                                                          | Description                                                                                                           | Default |
-|--------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------|
-| `dma-button` | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button.                                                                               | `text`  |
-| `iconButton` | `boolean`                                                     | When `true`, the button is styled as an icon-only button. Renders a single icon and no button label will be rendered. | `false` |
+| Name         | Type                                                          | Description                                                                                                           | Default  |
+|--------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|----------|
+| `dma-button` | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button.                                                                               | `text`   |
+| `iconButton` | `boolean`                                                     | When `true`, the button is styled as an icon-only button. Renders a single icon and no button label will be rendered. | `false`  |
+| `size`       | `'small' \| 'medium'`                                         | Specifies the size of the button.                                                                                     | `medium` |
 
 *   **`dma-button`**: This input determines the visual appearance of the button. The library provides built-in styles for types like `'primary'`, `'secondary'`, `'text' (default)`, and `'danger'`.
 *   **`iconButton`**: Use this input to explicitly define the button as an icon-only button. When `true`, the component only render the first icon.

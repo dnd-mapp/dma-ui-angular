@@ -1,5 +1,6 @@
 import { ButtonComponent, ButtonTypes, DEFAULT_BUTTON_TYPE } from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
+import { ButtonSizes, DEFAULT_BUTTON_SIZE } from '../../lib/button/button-size';
 import { storyWrapper } from '../story-wrapper';
 
 type StoryComponent = ButtonComponent & {
@@ -11,6 +12,7 @@ const metadata = {
     args: {
         disabled: false,
         label: 'My Button',
+        size: DEFAULT_BUTTON_SIZE,
         type: DEFAULT_BUTTON_TYPE,
     },
     argTypes: {
@@ -27,6 +29,19 @@ const metadata = {
             description: 'Provided as content of the button element.',
             table: {
                 category: 'Content',
+            },
+        },
+        size: {
+            control: {
+                type: 'select',
+            },
+            description: 'Determines the size of the button.',
+            options: Object.values(ButtonSizes),
+            table: {
+                category: 'Properties',
+                defaultValue: {
+                    summary: DEFAULT_BUTTON_SIZE,
+                },
             },
         },
         type: {
@@ -49,9 +64,9 @@ const metadata = {
     },
     component: ButtonComponent,
     decorators: [storyWrapper()],
-    render: ({ label, disabled, type, ...args }) => ({
+    render: ({ label, disabled, size, type, ...args }) => ({
         props: args,
-        template: `<button dma-button="${type}" ${disabled ? 'disabled' : ''}>${label}</button>`,
+        template: `<button dma-button="${type}" size="${size}" ${disabled ? 'disabled' : ''}>${label}</button>`,
     }),
     title: 'Button',
 } satisfies Meta<StoryComponent>;
