@@ -14,7 +14,8 @@
         "lint": "npx ng lint",
         "format:check": "npx prettier -l .",
         "format:write": "npx prettier -w .",
-        "publish": "cd dist/dma-ui-angular && npm publish"
+        "publish": "cd dist/dma-ui-angular && npm publish",
+        "generate-icon": "npx ts-node tools/generate-icon-component/index.mts"
     },
     "workspaces": [
         "libs/*"
