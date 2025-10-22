@@ -101,4 +101,8 @@
             background-color: styles.$disabled;
         }
     }
+
+    .input-container & {
+        margin: 0.4775em;
+    }
 }

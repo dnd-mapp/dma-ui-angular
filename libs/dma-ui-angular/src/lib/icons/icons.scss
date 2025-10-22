@@ -11,13 +11,20 @@
         width: 100%;
     }
 
-    dma-input &:first-of-type {
-        color: styles.$border-color;
+    [dma-button] & {
+        font-size: 130%;
+    }
+
+    dma-input & {
         margin: 0.55em;
     }
 
-    [dma-button] & {
-        font-size: 130%;
+    dma-input [dma-button] & {
+        margin: unset;
+    }
+
+    dma-input & {
+        color: styles.$border-color;
     }
 
     .input-container:hover &,

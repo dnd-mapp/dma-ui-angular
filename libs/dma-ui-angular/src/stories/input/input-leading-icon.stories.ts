@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { InputComponent, SoPlusIconComponent } from '@dnd-mapp/dma-ui-angular';
+import { InputComponent, SoUserIconComponent } from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
@@ -7,7 +7,7 @@ import { storyWrapper } from '../story-wrapper';
     selector: 'dma-input-leading-icon-story',
     templateUrl: `./input-leading-icon-story.component.html`,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [SoPlusIconComponent, InputComponent],
+    imports: [InputComponent, SoUserIconComponent],
 })
 class InputLeadingIconStoryComponent {}
 

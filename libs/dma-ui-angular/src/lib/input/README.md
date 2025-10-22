@@ -8,6 +8,7 @@ The `InputComponent` is a presentational, standalone Angular component that prov
 - [Usage](#usage)
     - [Basic Usage](#basic-usage)
     - [Leading Icon](#leading-icon)
+    - [Action Button](#action-button)
     - [Disabled Input](#disabled-input)
     - [Readonly Input](#readonly-input)
     - [Hidden Label](#hidden-label)
@@ -82,6 +83,18 @@ You can project a leading icon into the input component using the `dma-leading-i
 </dma-input>
 ```
 
+### Action Button
+
+A `ButtonComponent` can be projected into the input. This is useful for adding interactive elements like a clear button, a password visibility toggle, or a search trigger. The projected button must set to be a `iconButton` and it's size must be set to `small` as well.
+
+```html
+<dma-input label="Password">
+    <button type="button" dma-button iconButton size="small">
+        <dma-icon dma-so-xmark-icon />
+    </button>
+</dma-input>
+```
+
 ### Disabled Input
 
 To prevent user interaction with the input, use the `disabled` input.
@@ -110,14 +123,14 @@ The label can be hidden in case it isn't required.
 
 ### Inputs
 
-| Name          | Type      | Default | Description                                                   | Required |
-|---------------|-----------|---------|---------------------------------------------------------------|----------|
-| `label`       | `string`  | `''`    | **Required.** The text displayed as the input's label.        | Yes      |
-| `hideLabel`   | `boolean` | `false` | When `true`, the label will be visually hidden.               | No       |
-| `value`       | `string`  | `''`    | The current value of the input element.                       | No       |
-| `placeholder` | `string`  | `''`    | The placeholder text displayed when the input is empty.       | No       |
-| `disabled`    | `boolean` | `false` | When `true`, the input will be disabled and non-interactive.  | No       |
-| `readonly`    | `boolean` | `false` | When `true`, the input's value cannot be changed by the user. | No       |
+| Name          | Type      | Default     | Description                                                   | Required |
+|---------------|-----------|-------------|---------------------------------------------------------------|----------|
+| `label`       | `string`  | `undefined` | **Required.** The text displayed as the input's label.        | Yes      |
+| `hideLabel`   | `boolean` | `false`     | When `true`, the label will be visually hidden.               | No       |
+| `value`       | `string`  | `''`        | The current value of the input element.                       | No       |
+| `placeholder` | `string`  | `''`        | The placeholder text displayed when the input is empty.       | No       |
+| `disabled`    | `boolean` | `false`     | When `true`, the input will be disabled and non-interactive.  | No       |
+| `readonly`    | `boolean` | `false`     | When `true`, the input's value cannot be changed by the user. | No       |
 
 ### Outputs
 
@@ -127,9 +140,10 @@ The label can be hidden in case it isn't required.
 
 ### Content Projection Slots
 
-| Selector           | Description                                                                  |
-|--------------------|------------------------------------------------------------------------------|
-| `dma-leading-icon` | Content projected here will appear as a leading icon within the input field. |
+| Selector                                 | Description                                                                     |
+|------------------------------------------|---------------------------------------------------------------------------------|
+| `dma-leading-icon`                       | Content projected here will appear as a leading icon within the input field.    |
+| `[dma-button][iconButton][size='small']` | A `ButtonComponent` to be displayed as an action button within the input field. |
 
 ## Forms Integration
 

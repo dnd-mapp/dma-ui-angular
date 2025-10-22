@@ -1,3 +1,7 @@
 export * from './arrow-up-right-from-square/so-arrow-up-right-from-square-icon.component';
+export * from './eye-slash/so-eye-slash-icon.component';
+export * from './eye/so-eye-icon.component';
+export * from './magnifying-glass/so-magnifying-glass-icon.component';
 export * from './plus/so-plus-icon.component';
+export * from './user/so-user-icon.component';
 export * from './xmark/so-xmark-icon.component';
