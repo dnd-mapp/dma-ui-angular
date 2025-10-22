@@ -33,7 +33,7 @@
             padding: 0.5em;
         }
 
-        &:has(dma-icon) input {
+        &:has(dma-icon:not([dma-button] dma-icon)) input {
             border-left: 0.0625em solid styles.$border-color;
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
@@ -44,6 +44,10 @@
             border-color: styles.$on-surface;
 
             input {
+                border-color: styles.$on-surface;
+            }
+
+            &:has(dma-icon:not([dma-button] dma-icon)) input {
                 border-color: styles.$on-surface;
             }
         }
