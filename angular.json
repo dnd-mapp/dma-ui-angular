@@ -10,6 +10,10 @@
             "changeDetection": "OnPush",
             "style": "scss",
             "type": "component"
+        },
+        "@schematics/angular:directive": {
+            "flat": false,
+            "type": "directive"
         }
     },
     "projects": {
