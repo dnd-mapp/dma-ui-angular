@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ButtonComponent, SoXmarkIconComponent } from '@dnd-mapp/dma-ui-angular';
-import { Meta, StoryObj } from '@storybook/angular';
+import { ButtonComponent, provideTooltipConfig, SoXmarkIconComponent } from '@dnd-mapp/dma-ui-angular';
+import { applicationConfig, Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
 @Component({
@@ -13,7 +13,12 @@ class IconButtonStoryComponent {}
 
 const metadata = {
     component: IconButtonStoryComponent,
-    decorators: [storyWrapper()],
+    decorators: [
+        storyWrapper(),
+        applicationConfig({
+            providers: [provideTooltipConfig()],
+        }),
+    ],
     title: 'Button/Icons',
 } satisfies Meta<IconButtonStoryComponent>;
 

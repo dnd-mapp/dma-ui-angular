@@ -8,6 +8,7 @@ The `ButtonComponent` is a presentational component provided by the `@dnd-mapp/d
 *  **Visual Types:** Supports various visual styles through the `type` input.
 *  **Sizes:** Configurable sizes (`small` and `medium`) for different contexts.
 *  **Icon Support:** Easily add leading, trailing, or standalone icons to buttons.
+*  **Tooltips:** Integrate tooltips seamlessly using the `dmaTooltipLabel` input.
 *  **Standalone:** Can be imported and used directly in your Angular components without the need for Angular modules.
 
 ## Installation
@@ -27,21 +28,21 @@ To use the `ButtonComponent`, simply apply the `dma-button` attribute to a nativ
 Since `ButtonComponent` is a standalone component, you need to import it directly into the `imports` array of the component where you intend to use it.
 
 ```typescript
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ButtonComponent } from '@dnd-mapp/dma-ui-angular';
 
 @Component({
-  standalone: true,
-  selector: 'app-example',
-  template: `
-    <button dma-button="primary">Primary Button</button>
-    <button dma-button="secondary">Secondary Button</button>
-    <button dma-button="danger">Danger Button</button>
-    <button dma-button>Text Button</button>
-  `,
-  imports: [ButtonComponent],
+    selector: 'app-my',
+    template: `
+        <button dma-button="primary">Primary Button</button>
+        <button dma-button="secondary">Secondary Button</button>
+        <button dma-button="danger">Danger Button</button>
+        <button dma-button>Text Button</button>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [ButtonComponent],
 })
-export class ExampleComponent {}
+export class MyComponent {}
 ```
 
 ### Basic Examples
@@ -119,6 +120,20 @@ To create a button composed solely of an icon, add the `iconButton` attribute on
 
 **Note:** Only icons included in this Angular library are supported.
 
+## Tooltips
+
+The `ButtonComponent` leverages the `ToolTipAnchorDirective` (as a host directive) to provide a simple way to add tooltips. Simply set the `dmaTooltipLabel` attribute on the button with the desired tooltip text. For more information on how to set up tooltips, please refer to [the component documentation](../tooltip/README.md).
+
+```html
+<!-- A primary button with a tooltip -->
+<button dma-button="primary" dmaTooltipLabel="Click to save">Save</button>
+
+<!-- An icon button with a tooltip -->
+<button dma-button="danger" iconButton dmaTooltipLabel="Delete this item">
+    <dma-icon dma-so-trash-icon />
+</button>
+```
+
 ## API
 
 ### `button[dma-button]` Selector
@@ -127,11 +142,13 @@ The component is applied as a directive to the native `<button>` element using t
 
 ### Inputs
 
-| Name         | Type                                                          | Description                                                                                                           | Default  |
-|--------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|----------|
-| `dma-button` | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button.                                                                               | `text`   |
-| `iconButton` | `boolean`                                                     | When `true`, the button is styled as an icon-only button. Renders a single icon and no button label will be rendered. | `false`  |
-| `size`       | `'small' \| 'medium'`                                         | Specifies the size of the button.                                                                                     | `medium` |
+| Name              | Type                                                          | Description                                                                                                           | Default     |
+|-------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------|
+| `dma-button`      | `'primary' \| 'secondary' \| 'danger' \| 'text' \| undefined` | Defines the visual style of the button.                                                                               | `text`      |
+| `iconButton`      | `boolean`                                                     | When `true`, the button is styled as an icon-only button. Renders a single icon and no button label will be rendered. | `false`     |
+| `size`            | `'small' \| 'medium'`                                         | Specifies the size of the button.                                                                                     | `medium`    |
+| `dmaTooltipLabel` | `string`                                                      | The text content to be displayed in the tooltip when the button is hovered.                                           | `undefined` |
 
-*   **`dma-button`**: This input determines the visual appearance of the button. The library provides built-in styles for types like `'primary'`, `'secondary'`, `'text' (default)`, and `'danger'`.
-*   **`iconButton`**: Use this input to explicitly define the button as an icon-only button. When `true`, the component only render the first icon.
+*  **`dma-button`**: This input determines the visual appearance of the button. The library provides built-in styles for types like `'primary'`, `'secondary'`, `'text' (default)`, and `'danger'`.
+*  **`iconButton`**: Use this input to explicitly define the button as an icon-only button. When `true`, the component only render the first icon.
+*  **`dmaTooltipLabel`**: Provides a descriptive label that appears as a tooltip on hover. This is particularly useful for icon-only buttons to convey their action.
