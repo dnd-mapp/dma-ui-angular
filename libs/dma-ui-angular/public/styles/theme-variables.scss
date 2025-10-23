@@ -10,6 +10,9 @@ $on-background: var(--on-background, oklch(0.1 0 0));
 $surface: var(--surface, oklch(0.99 0 0));
 $on-surface: var(--on-surface, oklch(0.1 0 0));
 
+$inverse-surface: var(--surface, oklch(0.3 0 0));
+$on-inverse-surface: var(--on-surface, oklch(0.95 0 0));
+
 $border-color: var(--border-color, oklch(0.75 0 0));
 
 $primary: var(--primary, oklch(0.6 0.2 250));
