@@ -16,6 +16,7 @@ export async function createTestEnvironment<Component = unknown, Harness extends
     TestBed.configureTestingModule({
         imports: [...(params.testComponent ? [params.testComponent] : []), ...(params.imports ? params.imports : [])],
         providers: [...(params.providers ? params.providers : [])],
+        animationsEnabled: true,
     });
 
     let component: ComponentFixture<Component>;

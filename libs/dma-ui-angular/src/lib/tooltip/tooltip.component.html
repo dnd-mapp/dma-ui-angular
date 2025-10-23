@@ -1,0 +1,10 @@
+@if (showing()) {
+    <span
+        animate.enter="showing"
+        animate.leave="hiding"
+        (animate.enter)="onEnter($event)"
+        (animate.leave)="onLeave($event)"
+    >
+        {{ label() }}
+    </span>
+}
