@@ -1,0 +1,42 @@
+@use '../../styles';
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+:host {
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4em 0.8em;
+        background-color: styles.$inverse-surface;
+        color: styles.$on-inverse-surface;
+        border-radius: 0.4em;
+        font-size: 82%;
+
+        &.showing {
+            opacity: 0;
+            animation: fade-in 200ms ease-out 400ms;
+        }
+
+        &.hiding {
+            opacity: 1;
+            animation: fade-out 100ms ease-in 100ms;
+        }
+    }
+}
