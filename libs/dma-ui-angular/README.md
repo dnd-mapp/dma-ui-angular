@@ -76,6 +76,7 @@ Components you can find in this library are:
 
 *  [DmaButton](src/lib/button/README.md)
 *  [DmaInput](src/lib/input/README.md)
+*  [DmaTooltip](src/lib/tooltip/README.md)
 
 ## Theming
 
