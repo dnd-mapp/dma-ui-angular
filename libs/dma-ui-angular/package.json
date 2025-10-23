@@ -1,6 +1,6 @@
 {
     "name": "@dnd-mapp/dma-ui-angular",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "license": "AGPL-3.0",
     "description": "An Angular library containing themed and styled presentational UI components",
     "author": {
