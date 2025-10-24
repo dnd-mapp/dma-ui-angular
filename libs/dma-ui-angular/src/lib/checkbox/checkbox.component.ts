@@ -4,13 +4,24 @@ import {
     Component,
     computed,
     DestroyRef,
+    ExistingProvider,
+    forwardRef,
     inject,
     input,
     output,
     signal,
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { SoCheckIconComponent, SoMinusIconComponent } from '../icons';
+
+function provideValueAccessor(): ExistingProvider {
+    return {
+        provide: NG_VALUE_ACCESSOR,
+        useExisting: forwardRef(() => CheckboxComponent),
+        multi: true,
+    };
+}
 
 @Component({
     selector: 'dma-checkbox',
@@ -26,8 +37,9 @@ import { SoCheckIconComponent, SoMinusIconComponent } from '../icons';
         '(mouseleave)': 'onMouseleave()',
     },
     imports: [SoMinusIconComponent, SoCheckIconComponent],
+    providers: [provideValueAccessor()],
 })
-export class CheckboxComponent {
+export class CheckboxComponent implements ControlValueAccessor {
     private readonly destroyRef = inject(DestroyRef);
 
     public readonly label = input<string>(null);
@@ -64,6 +76,10 @@ export class CheckboxComponent {
 
     protected overwriteIndeterminate = false;
 
+    private ngOnChange: (checked: boolean) => void;
+
+    private ngOnTouched: () => void;
+
     constructor() {
         toObservable(this.checked)
             .pipe(takeUntilDestroyed(this.destroyRef))
@@ -90,6 +106,22 @@ export class CheckboxComponent {
             });
     }
 
+    public writeValue(checked: boolean) {
+        this.isChecked.set(checked);
+    }
+
+    public registerOnTouched(fn: () => void) {
+        this.ngOnTouched = fn;
+    }
+
+    public registerOnChange(fn: (checked: boolean) => void) {
+        this.ngOnChange = fn;
+    }
+
+    public setDisabledState(isDisabled: boolean): void {
+        this.isDisabled.set(isDisabled);
+    }
+
     protected onToggle() {
         if (this.isDisabled()) return;
 
@@ -100,6 +132,11 @@ export class CheckboxComponent {
         }
         this.isChecked.update((checked) => !checked);
         this.checkedChange.emit(this.isChecked());
+
+        if (this.ngOnChange) {
+            this.ngOnTouched();
+            this.ngOnChange(this.isChecked());
+        }
     }
 
     protected onMouseenter() {

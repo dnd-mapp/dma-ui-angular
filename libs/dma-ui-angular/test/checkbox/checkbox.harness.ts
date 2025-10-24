@@ -18,6 +18,10 @@ export class CheckboxHarness extends ComponentHarness {
         await (await this.host()).mouseAway();
     }
 
+    public async isDisabled() {
+        return (await (await this.host()).getAttribute('disabled')) === '';
+    }
+
     public async isChecked() {
         return (await Promise.all([this.isCheckIconVisible(), this.hasCheckAttribute()])).every(Boolean);
     }
