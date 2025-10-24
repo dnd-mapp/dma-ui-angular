@@ -5,3 +5,6 @@ export * from './magnifying-glass/so-magnifying-glass-icon.component';
 export * from './plus/so-plus-icon.component';
 export * from './user/so-user-icon.component';
 export * from './xmark/so-xmark-icon.component';
+export * from './check/so-check-icon.component';
+export * from './minus/so-minus-icon.component';
+export * from './trash/so-trash-icon.component';
