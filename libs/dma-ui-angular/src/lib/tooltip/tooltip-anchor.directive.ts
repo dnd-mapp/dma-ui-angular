@@ -17,6 +17,8 @@ import { tooltipVerticalOverlayPositions } from './tooltip-overlay.positions';
 import { TooltipStates } from './tooltip-state';
 import { TooltipComponent } from './tooltip.component';
 
+// TODO: Add support for horizontal positions.
+// TODO: Add support to provide preferred position.
 @Directive({
     selector: '[dmaTooltip]',
     host: {
