@@ -6,9 +6,9 @@
             <dma-icon dma-so-check-icon />
         }
     </div>
-    <span class="label">
-        {{ label() }}
-    </span>
+    @if (hasLabel()) {
+        <span class="label">{{ label() }}</span>
+    }
 </div>
 <input
     type="checkbox"

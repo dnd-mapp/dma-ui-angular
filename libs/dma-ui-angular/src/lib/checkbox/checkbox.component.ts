@@ -60,6 +60,8 @@ export class CheckboxComponent {
 
     protected readonly disableAttribute = computed(() => (this.isDisabled() ? '' : undefined));
 
+    protected readonly hasLabel = computed(() => Boolean(this.label()));
+
     protected overwriteIndeterminate = false;
 
     constructor() {
