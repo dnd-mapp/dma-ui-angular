@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/angular';
+import { useArgs } from 'storybook/preview-api';
 
 const preview = {
     parameters: {
@@ -9,6 +10,12 @@ const preview = {
             },
         },
     },
+    decorators: [
+        (story, context) => {
+            const [, updateArgs] = useArgs();
+            return story({ ...context, updateArgs });
+        },
+    ],
 } satisfies Preview;
 
 export default preview;
