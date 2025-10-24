@@ -40,6 +40,8 @@ export default tsEslint.config(
         extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
         rules: {
             '@angular-eslint/template/label-has-associated-control': 'off',
+            '@angular-eslint/template/interactive-supports-focus': 'off',
+            '@angular-eslint/template/click-events-have-key-events': 'off',
         },
     },
     storybook.configs['flat/recommended'],
