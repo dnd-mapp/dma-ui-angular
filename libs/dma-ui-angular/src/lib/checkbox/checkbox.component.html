@@ -1,0 +1,19 @@
+<div class="checkbox-container">
+    <div class="state-container">
+        @if (!isChecked() && isIndeterminate() && !overwriteIndeterminate) {
+            <dma-icon dma-so-minus-icon />
+        } @else {
+            <dma-icon dma-so-check-icon />
+        }
+    </div>
+    <span class="label">
+        {{ label() }}
+    </span>
+</div>
+<input
+    type="checkbox"
+    [checked]="isChecked()"
+    [indeterminate]="isIndeterminate()"
+    [disabled]="isDisabled()"
+    [value]="checkboxValue()"
+/>
