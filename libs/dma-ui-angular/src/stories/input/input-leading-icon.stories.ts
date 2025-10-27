@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { InputComponent, SoUserIconComponent } from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
@@ -9,9 +9,14 @@ import { storyWrapper } from '../story-wrapper';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [InputComponent, SoUserIconComponent],
 })
-class InputLeadingIconStoryComponent {}
+class InputLeadingIconStoryComponent {
+    public readonly disabled = input(false);
+}
 
 const metadata = {
+    args: {
+        disabled: false,
+    },
     component: InputLeadingIconStoryComponent,
     decorators: [storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',

@@ -1,7 +1,7 @@
 @if (!hideLabel()) {
     <label>{{ label() }}</label>
 }
-<div class="input-container">
+<dma-base-container [disabled]="isDisabled()">
     <ng-content select="dma-leading-icon" />
     <input
         type="text"
@@ -13,5 +13,6 @@
         (focus)="onBlur()"
         (change)="onValueChange(input.value)"
     />
+    <ng-content select="dma-trailing-icon" />
     <ng-content select="button[dma-button][iconButton][size='small']" />
-</div>
+</dma-base-container>

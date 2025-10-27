@@ -2,6 +2,7 @@ import {
     booleanAttribute,
     ChangeDetectionStrategy,
     Component,
+    computed,
     DestroyRef,
     ExistingProvider,
     forwardRef,
@@ -12,6 +13,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { BaseContainerComponent } from '../base-container';
 
 function provideValueAccessor(): ExistingProvider {
     return {
@@ -27,7 +29,10 @@ function provideValueAccessor(): ExistingProvider {
     styleUrl: './input.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [provideValueAccessor()],
-    imports: [],
+    host: {
+        '[attr.disabled]': 'disabledAttr()',
+    },
+    imports: [BaseContainerComponent],
 })
 export class InputComponent implements ControlValueAccessor {
     private readonly destroyRef = inject(DestroyRef);
@@ -52,7 +57,9 @@ export class InputComponent implements ControlValueAccessor {
 
     public readonly isReadonly = signal(false);
 
-    protected ngOnTouched?: () => void;
+    protected readonly disabledAttr = computed(() => (this.isDisabled() ? '' : undefined));
+
+    private ngOnTouched?: () => void;
 
     private ngOnChange?: (value: string) => void;
 

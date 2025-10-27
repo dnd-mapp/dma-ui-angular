@@ -75,6 +75,7 @@ This library provides a suite of presentational components. For detailed documen
 Components you can find in this library are:
 
 *  [DmaButton](src/lib/button/README.md)
+*  [DmaCheckbox](src/lib/checkbox/README.md)
 *  [DmaInput](src/lib/input/README.md)
 *  [DmaTooltip](src/lib/tooltip/README.md)
 

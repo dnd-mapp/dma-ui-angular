@@ -1,0 +1,31 @@
+@use '../../styles';
+
+:host {
+    outline: none;
+    border-radius: 0.33em;
+
+    .container {
+        display: flex;
+        align-items: center;
+        border: solid styles.$border-color 0.0625em;
+        border-radius: 0.33em;
+        background-color: styles.$surface;
+        color: styles.$on-surface;
+    }
+
+    &:not([disabled]) {
+        &:hover .container,
+        &:has(input:focus) .container {
+            border-color: styles.$on-surface;
+        }
+    }
+
+    &[disabled] {
+        .container {
+            background-color: styles.$disabled;
+            border-color: styles.$disabled;
+            color: styles.$on-disabled;
+            opacity: styles.$disabled-opacity;
+        }
+    }
+}

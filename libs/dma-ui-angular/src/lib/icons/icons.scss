@@ -23,12 +23,12 @@
         margin: unset;
     }
 
-    dma-input & {
+    dma-base-container & {
         color: styles.$border-color;
     }
 
-    .input-container:hover &,
-    .input-container:has(input:focus) & {
+    dma-base-container:not([disabled]):hover &,
+    dma-base-container:not([disabled]):has(input:focus) & {
         color: styles.$on-surface;
     }
 }
