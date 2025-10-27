@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
     ButtonComponent,
     InputComponent,
     SoMagnifyingGlassIconComponent,
     SoXmarkIconComponent,
 } from '@dnd-mapp/dma-ui-angular';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
@@ -14,9 +14,14 @@ import { storyWrapper } from '../story-wrapper';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [SoXmarkIconComponent, InputComponent, ButtonComponent, SoMagnifyingGlassIconComponent],
 })
-class InputActionButtonStoryComponent {}
+class InputActionButtonStoryComponent {
+    public readonly disabled = input(false);
+}
 
 const metadata = {
+    args: {
+        disabled: false,
+    },
     component: InputActionButtonStoryComponent,
     decorators: [storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',

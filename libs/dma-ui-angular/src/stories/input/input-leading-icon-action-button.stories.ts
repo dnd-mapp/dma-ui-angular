@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import {
     ButtonComponent,
     InputComponent,
@@ -14,9 +14,14 @@ import { storyWrapper } from '../story-wrapper';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [SoXmarkIconComponent, InputComponent, ButtonComponent, SoMagnifyingGlassIconComponent],
 })
-class InputLeadingIconActionButtonStoryComponent {}
+class InputLeadingIconActionButtonStoryComponent {
+    public readonly disabled = input(false);
+}
 
 const metadata = {
+    args: {
+        disabled: false,
+    },
     component: InputLeadingIconActionButtonStoryComponent,
     decorators: [storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
