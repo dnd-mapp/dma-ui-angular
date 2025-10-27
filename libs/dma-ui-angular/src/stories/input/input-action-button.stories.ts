@@ -1,10 +1,5 @@
-import {
-    ButtonComponent,
-    InputComponent,
-    SoMagnifyingGlassIconComponent,
-    SoXmarkIconComponent,
-} from '@dnd-mapp/dma-ui-angular';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ButtonComponent, InputComponent, SoXmarkIconComponent } from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
@@ -12,7 +7,7 @@ import { storyWrapper } from '../story-wrapper';
     selector: 'dma-input-action-button-story',
     templateUrl: `./input-action-button-story.component.html`,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [SoXmarkIconComponent, InputComponent, ButtonComponent, SoMagnifyingGlassIconComponent],
+    imports: [SoXmarkIconComponent, InputComponent, ButtonComponent],
 })
 class InputActionButtonStoryComponent {
     public readonly disabled = input(false);
