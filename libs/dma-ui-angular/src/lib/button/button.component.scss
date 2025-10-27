@@ -87,6 +87,7 @@
         }
     }
 
+    dma-input[disabled] &,
     &:disabled {
         background-color: styles.$disabled;
         color: styles.$on-disabled;
@@ -102,7 +103,7 @@
         }
     }
 
-    .input-container & {
+    .container & {
         margin: 0.441em;
     }
 }

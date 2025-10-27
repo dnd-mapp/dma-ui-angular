@@ -12,14 +12,7 @@
         font-size: 95%;
     }
 
-    .input-container {
-        display: flex;
-        align-items: center;
-        border: solid styles.$border-color 0.0625em;
-        border-radius: 0.33em;
-        background-color: styles.$surface;
-        color: styles.$on-surface;
-
+    dma-base-container {
         input {
             display: inline-block;
             flex: 1 1 auto;
@@ -31,37 +24,30 @@
             background-color: styles.$surface;
             color: styles.$on-surface;
             padding: 0.438em;
+
+            &:focus {
+                border-color: styles.$on-surface !important;
+            }
+        }
+
+        &:not([disabled]):hover {
+            input {
+                border-color: styles.$on-surface !important;
+            }
+        }
+
+        &:has(input:disabled) {
+            input {
+                background-color: styles.$disabled;
+                color: styles.$on-disabled;
+                opacity: styles.$disabled-opacity;
+            }
         }
 
         &:has(dma-icon:not([dma-button] dma-icon)) input {
             border-left: 0.0625em solid styles.$border-color;
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
-        }
-
-        &:hover,
-        &:has(input:focus) {
-            border-color: styles.$on-surface;
-
-            input {
-                border-color: styles.$on-surface;
-            }
-
-            &:has(dma-icon:not([dma-button] dma-icon)) input {
-                border-color: styles.$on-surface;
-            }
-        }
-
-        &:has(input:disabled) {
-            border-color: styles.$disabled;
-            background-color: styles.$disabled;
-            color: styles.$on-disabled;
-            opacity: styles.$disabled-opacity;
-
-            input {
-                background-color: styles.$disabled;
-                color: styles.$on-disabled;
-            }
         }
     }
 }
