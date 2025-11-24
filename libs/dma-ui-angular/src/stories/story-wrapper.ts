@@ -1,6 +1,6 @@
 import { componentWrapperDecorator } from '@storybook/angular';
 
-const StoryPositions = {
+export const StoryPositions = {
     TOP_START: 'top-start',
     TOP_CENTER: 'top-center',
     TOP_END: 'top-end',

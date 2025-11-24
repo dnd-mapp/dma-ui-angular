@@ -1,0 +1,17 @@
+@if (hasLabel()) {
+    <label>{{ label() }}</label>
+}
+<dma-base-container #origin (click)="onToggleOpen()">
+    <span>{{ displayValue() }}</span>
+    @if (isOpen()) {
+        <dma-icon dma-so-chevron-up-icon />
+    } @else {
+        <dma-icon dma-so-chevron-down-icon />
+    }
+</dma-base-container>
+
+<ng-template #overlay>
+    <div class="options-container">
+        <ng-content select="dma-option" />
+    </div>
+</ng-template>

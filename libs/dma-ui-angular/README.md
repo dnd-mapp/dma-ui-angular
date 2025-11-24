@@ -78,6 +78,7 @@ Components you can find in this library are:
 *  [DmaCheckbox](src/lib/checkbox/README.md)
 *  [DmaInput](src/lib/input/README.md)
 *  [DmaTooltip](src/lib/tooltip/README.md)
+*  [DmaSelect](src/lib/select/README.md)
 
 ## Theming
 
