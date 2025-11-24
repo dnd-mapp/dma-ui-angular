@@ -35,7 +35,7 @@ This project is built using the Angular CLI, v20.
 
 Before you begin, ensure you have the following installed on your system:
 
-*   **[Node.js](https://nodejs.org/en/download/) (v22) and npm (Node Package Manager, v11)**: We recommend using [mise-en-place](https://mise.jdx.dev/) to manage your installed version of Node.js and npm globally.
+*   **[Node.js](https://nodejs.org/en/download/) (v24) and npm (Node Package Manager, v11)**: We recommend using [mise-en-place](https://mise.jdx.dev/) to manage your installed version of Node.js and npm globally.
 *   **Angular CLI**: Install globally using npm
     ```bash
     npm install -g @angular/cli@~20
