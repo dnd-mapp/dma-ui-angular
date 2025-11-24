@@ -13,8 +13,8 @@
         "directory": "libs/dma-ui-angular"
     },
     "engines": {
-        "node": ">=22",
-        "npm": ">=10"
+        "node": ">=24",
+        "npm": ">=11"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"

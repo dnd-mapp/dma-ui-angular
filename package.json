@@ -21,8 +21,8 @@
         "libs/*"
     ],
     "engines": {
-        "node": ">=22",
-        "npm": ">=10"
+        "node": ">=24",
+        "npm": ">=11"
     },
     "dependencies": {
         "@angular/cdk": "~20.2.0",
