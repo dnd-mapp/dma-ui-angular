@@ -13,6 +13,12 @@
       "options": {
         "singleQuote": false
       }
+    },
+    {
+      "files": ["**/package*.json", ".prettierrc"],
+      "options": {
+        "tabWidth": 2
+      }
     }
   ],
   "plugins": ["prettier-plugin-organize-imports"],

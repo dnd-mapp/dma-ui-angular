@@ -1,7 +1,7 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
 import eslint from '@eslint/js';
 import angular from 'angular-eslint';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import storybook from 'eslint-plugin-storybook';
 import tsEslint from 'typescript-eslint';
 
@@ -13,7 +13,6 @@ export default tsEslint.config(
             ...tsEslint.configs.recommended,
             ...tsEslint.configs.stylistic,
             ...angular.configs.tsRecommended,
-            eslintPluginPrettierRecommended,
         ],
         processor: angular.processInlineTemplates,
         rules: {
@@ -46,4 +45,5 @@ export default tsEslint.config(
         },
     },
     storybook.configs['flat/recommended'],
+    eslintConfigPrettier,
 );
