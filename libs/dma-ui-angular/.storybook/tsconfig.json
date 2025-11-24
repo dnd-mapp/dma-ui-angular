@@ -1,10 +1,11 @@
 {
     "extends": "../tsconfig.lib.json",
-    "files": ["./typings.d.ts"],
+    "files": ["./typings.d.ts", "./main.mts"],
     "include": ["../src/**/*.stories.*", "./preview.ts"],
     "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "types": ["node"]
     }
