@@ -6,4 +6,8 @@ export class BaseContainerHarness extends ComponentHarness {
     public async hasDisabledAttribute() {
         return (await (await this.host()).getAttribute('disabled')) === '';
     }
+
+    public async click() {
+        await (await this.host()).click();
+    }
 }
