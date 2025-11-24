@@ -33,6 +33,7 @@ export default tsEslint.config(
                     style: 'kebab-case',
                 },
             ],
+            '@typescript-eslint/no-unused-vars': 'off',
         },
     },
     {

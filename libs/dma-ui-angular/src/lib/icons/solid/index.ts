@@ -1,5 +1,7 @@
 export * from './arrow-up-right-from-square/so-arrow-up-right-from-square-icon.component';
 export * from './check/so-check-icon.component';
+export * from './chevron-down/so-chevron-down-icon.component';
+export * from './chevron-up/so-chevron-up-icon.component';
 export * from './eye-slash/so-eye-slash-icon.component';
 export * from './eye/so-eye-icon.component';
 export * from './magnifying-glass/so-magnifying-glass-icon.component';

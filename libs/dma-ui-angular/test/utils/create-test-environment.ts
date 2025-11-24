@@ -19,18 +19,18 @@ export async function createTestEnvironment<Component = unknown, Harness extends
         animationsEnabled: true,
     });
 
-    let component: ComponentFixture<Component>;
+    let fixture: ComponentFixture<Component>;
     let harnessLoader: HarnessLoader;
     let harness: Harness;
 
     if (params.testComponent && params.harness) {
-        component = TestBed.createComponent(params.testComponent);
-        harnessLoader = TestbedHarnessEnvironment.loader(component);
+        fixture = TestBed.createComponent(params.testComponent);
+        harnessLoader = TestbedHarnessEnvironment.loader(fixture);
 
         harness = await harnessLoader.getHarness(params.harness);
     }
     return {
-        ...(component ? { component: component.componentInstance } : {}),
+        ...(fixture ? { component: fixture.componentInstance, fixture: fixture } : {}),
         ...(harness ? { harness: harness } : {}),
         ...(harnessLoader ? { harnessLoader: harnessLoader } : {}),
     };

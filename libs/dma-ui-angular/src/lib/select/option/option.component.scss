@@ -1,0 +1,24 @@
+@use '../../../styles';
+
+:host {
+    display: block;
+    user-select: none;
+    background-color: styles.$surface;
+    color: styles.$on-surface;
+    padding: 0.4em 0.8em;
+
+    &[selected] {
+        font-weight: styles.$fw-bold;
+        background-color: styles.active(styles.$surface);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: styles.hover(styles.$surface);
+    }
+
+    &:active {
+        cursor: pointer;
+        background-color: styles.active(styles.$surface);
+    }
+}

@@ -1,0 +1,19 @@
+@use '../../styles';
+
+:host {
+    user-select: none;
+
+    span {
+        margin: 0.438em;
+    }
+
+    dma-base-container:hover {
+        cursor: pointer;
+    }
+}
+
+.options-container {
+    width: 100%;
+    padding: 0.2em 0;
+    border: 0.0625em solid styles.$border-color;
+}
