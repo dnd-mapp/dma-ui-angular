@@ -12,6 +12,10 @@
         "url": "git+https://github.com/dnd-mapp/dma-ui-angular.git",
         "directory": "libs/dma-ui-angular"
     },
+    "engines": {
+        "node": ">=22",
+        "npm": ">=10"
+    },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },

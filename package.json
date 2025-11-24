@@ -20,6 +20,10 @@
     "workspaces": [
         "libs/*"
     ],
+    "engines": {
+        "node": ">=22",
+        "npm": ">=10"
+    },
     "dependencies": {
         "@angular/cdk": "~20.2.0",
         "@angular/common": "~20.3.0",
