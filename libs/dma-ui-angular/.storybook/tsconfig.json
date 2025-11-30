@@ -1,7 +1,6 @@
 {
     "extends": "../tsconfig.lib.json",
-    "files": ["./typings.d.ts", "./main.mts"],
-    "include": ["../src/**/*.stories.*", "./preview.ts"],
+    "include": ["../src/**/*.stories.*", "./typings.d.ts", "./preview.ts"],
     "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
