@@ -3,7 +3,8 @@
     "version": 1,
     "cli": {
         "analytics": "a888cfd9-a542-4e54-ba23-b2a73f08912a",
-        "schematicCollections": ["angular-eslint"]
+        "schematicCollections": ["angular-eslint"],
+        "packageManager": "pnpm"
     },
     "schematics": {
         "@schematics/angular:component": {

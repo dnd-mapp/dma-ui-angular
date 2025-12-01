@@ -9,7 +9,7 @@ reports/
 __screenshots__/
 
 # Node
-/node_modules
+**/node_modules/
 
 # IDEs and editors
 .idea/*
