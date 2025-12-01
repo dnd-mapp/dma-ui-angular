@@ -9,7 +9,12 @@ jobs:
         runs-on: ubuntu-22.04
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
+
+            - name: Setup environment
+              uses: ./.github/actions/setup-environment
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: CI
               uses: ./.github/actions/ci

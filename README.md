@@ -21,9 +21,9 @@
 
 ## About the project
 
-This repository hosts the `dma-ui-angular` Angular library, a collection of presentational UI components. This library is designed to be published as a npm package to GitHub Packages (GHCR) and consumed by other Angular applications within the D&D Mapp platform.
+This repository hosts the `dma-ui-angular` Angular library, a collection of presentational UI components. This library is designed to be published as an npm package to GitHub Packages (GHCR) and consumed by other Angular applications within the D&D Mapp platform.
 
-The primary goal of `dma-ui-angular` is to provide a standardized set of reusable UI components, promoting consistency and accelerating development across various frontend projects. By separating presentational components into a dedicated library, we aim to improve maintainability and allow for independent versioning and distribution.
+The primary goal of `dma-ui-angular` is to provide a standardized set of reusable UI components, promoting consistency and speeding up development across various frontend projects. By separating presentational components into a dedicated library, we aim to improve maintainability and allow for independent versioning and distribution.
 
 ___
 
@@ -68,12 +68,12 @@ To set up the development environment:
 
 ### Certificates
 
-1.  **Generate a self-signed certificate to serve the application over HTTPS:** The app is served locally over HTTPS by default. In order to accomplish this you must generate a self-signed certificate using mkcert.
+1.  **Generate a self-signed certificate to serve the application over HTTPS:** The app is served locally over HTTPS by default. To achieve this, you must generate a self-signed certificate using mkcert.
     ```bash
     mkcert -cert-file certificate.pem -key-file certificate-key.pem localhost.shared-ui.dndmapp.dev localhost
     ```
 
-2.  **Trust the certificate:** In order to prevent HTTPS warnings from your browser you must add them as trusted certificates. Follow the steps below for your Operating System:
+2.  **Trust the certificate:** To prevent HTTPS warnings from your browser, you must add them as trusted certificates. Follow the steps below for your Operating System:
     <ul>
         <li>
             <details>
@@ -143,7 +143,7 @@ To set up the development environment:
         <li>For all Operating Systems: You need to restart your browser after trusting the certificate to complete the process.</li>
     </ul>
 
-3.  **Update the hosts file:** To be able to use the custom host names you need to update the hosts file. Follow the steps below for your Operating System:
+3.  **Update the hosts file:** To be able to use the custom host names, you need to update the hosts file. Follow the steps below for your Operating System:
     <ul>
         <li>
             <p>
@@ -180,7 +180,7 @@ To set up the development environment:
 To build the `dma-ui-angular` library:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 The compiled library will be output to the `dist/dma-ui-angular` directory.
@@ -190,7 +190,7 @@ The compiled library will be output to the `dist/dma-ui-angular` directory.
 To run the unit tests for the library:
 
 ```bash
-npm run test
+pnpm test
 ```
 
 ### Running Storybook
@@ -200,7 +200,7 @@ Storybook is used to develop, test, and document components in isolation.
 To start Storybook for the `dma-ui-angular` library:
 
 ```bash
-npm run storybook
+pnpm storybook
 ```
 
 This command will typically start a development server and open Storybook in your browser (at `https://localhost.shared-ui.dndmapp.dev:4100`).
