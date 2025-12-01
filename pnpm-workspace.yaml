@@ -1,6 +1,2 @@
 packages:
     - 'libs/*'
-trustPolicy: no-downgrade
-minimumReleaseAge: 1440
-minimumReleaseReleaseAgeExclude:
-    - '@dnd-mapp/*'
