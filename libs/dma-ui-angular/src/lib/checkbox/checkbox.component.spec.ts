@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CheckboxHarness, createTestEnvironment } from '@dnd-mapp/dma-ui-angular/test';
 import { CheckboxComponent } from './checkbox.component';
 
-describe.skip('CheckboxComponent', () => {
+describe('CheckboxComponent', () => {
     @Component({
         template: `<dma-checkbox
             label="My checkbox"
