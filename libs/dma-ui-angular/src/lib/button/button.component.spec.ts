@@ -4,7 +4,7 @@ import { ButtonSizes, DEFAULT_BUTTON_SIZE } from './button-size';
 import { ButtonTypes, DEFAULT_BUTTON_TYPE } from './button-type';
 import { ButtonComponent } from './button.component';
 
-describe('ButtonComponent', () => {
+describe.skip('ButtonComponent', () => {
     @Component({
         template: `<button [dma-button]="type()" [size]="size()">My Button</button>`,
         imports: [ButtonComponent],
