@@ -13,11 +13,16 @@ export interface CreateTestEnvironmentParams<Component = unknown, Harness extend
 export async function createTestEnvironment<Component = unknown, Harness extends ComponentHarness = null>(
     params: CreateTestEnvironmentParams<Component, Harness>,
 ) {
-    getTestBed().configureTestingModule({
-        imports: [...(params.testComponent ? [params.testComponent] : []), ...(params.imports ? params.imports : [])],
-        providers: [...(params.providers ? params.providers : [])],
-        animationsEnabled: true,
-    });
+    getTestBed()
+        .resetTestingModule()
+        .configureTestingModule({
+            imports: [
+                ...(params.testComponent ? [params.testComponent] : []),
+                ...(params.imports ? params.imports : []),
+            ],
+            providers: [...(params.providers ? params.providers : [])],
+            animationsEnabled: true,
+        });
 
     let fixture: ComponentFixture<Component>;
     let harnessLoader: HarnessLoader;
