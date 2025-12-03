@@ -1,10 +1,5 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
-    "references": [
-        { "path": "./libs/dma-ui-angular/tsconfig.lib.json" },
-        { "path": "./libs/dma-ui-angular/tsconfig.spec.json" }
-    ],
+    "references": [{ "path": "./tsconfig.lib.json" }, { "path": "./tsconfig.spec.json" }],
     "files": [],
     "compileOnSave": false,
     "compilerOptions": {
@@ -24,8 +19,8 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "paths": {
-            "@dnd-mapp/dma-ui-angular": ["libs/dma-ui-angular/src/index.ts"],
-            "@dnd-mapp/dma-ui-angular/test": ["libs/dma-ui-angular/test/index.ts"]
+            "@dnd-mapp/dma-ui-angular": ["src/index.ts"],
+            "@dnd-mapp/dma-ui-angular/test": ["test/index.ts"]
         },
         "rootDir": ".",
         "skipLibCheck": true,

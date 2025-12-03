@@ -20,8 +20,8 @@
     "projects": {
         "dma-ui-angular": {
             "projectType": "library",
-            "root": "libs/dma-ui-angular",
-            "sourceRoot": "libs/dma-ui-angular/src",
+            "root": ".",
+            "sourceRoot": "src",
             "prefix": "dma",
             "architect": {
                 "build": {
@@ -29,10 +29,10 @@
                     "defaultConfiguration": "prod",
                     "configurations": {
                         "prod": {
-                            "tsConfig": "libs/dma-ui-angular/tsconfig.lib.prod.json"
+                            "tsConfig": "tsconfig.lib.prod.json"
                         },
                         "dev": {
-                            "tsConfig": "libs/dma-ui-angular/tsconfig.lib.json"
+                            "tsConfig": "tsconfig.lib.json"
                         }
                     }
                 },
@@ -42,11 +42,11 @@
                         "assets": [],
                         "browserTarget": "dma-ui-angular:build",
                         "compodoc": false,
-                        "configDir": "libs/dma-ui-angular/.storybook",
+                        "configDir": ".storybook",
                         "experimentalZoneless": true,
                         "outputDir": "dist/storybook",
-                        "styles": ["libs/dma-ui-angular/.storybook/styles.scss"],
-                        "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
+                        "styles": [".storybook/styles.scss"],
+                        "tsConfig": ".storybook/tsconfig.json"
                     }
                 },
                 "storybook": {
@@ -55,7 +55,7 @@
                         "assets": [],
                         "browserTarget": "dma-ui-angular:build",
                         "compodoc": false,
-                        "configDir": "libs/dma-ui-angular/.storybook",
+                        "configDir": ".storybook",
                         "experimentalZoneless": true,
                         "host": "localhost.shared-ui.dndmapp.dev",
                         "https": true,
@@ -63,8 +63,8 @@
                         "port": 4100,
                         "sslCert": "certificate.pem",
                         "sslKey": "certificate-key.pem",
-                        "styles": ["libs/dma-ui-angular/.storybook/styles.scss"],
-                        "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
+                        "styles": [".storybook/styles.scss"],
+                        "tsConfig": ".storybook/tsconfig.json"
                     }
                 },
                 "test": {
@@ -83,8 +83,8 @@
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "lintFilePatterns": ["libs/dma-ui-angular/**/*.ts", "libs/dma-ui-angular/**/*.html"],
-                        "eslintConfig": "libs/dma-ui-angular/eslint.config.mjs"
+                        "lintFilePatterns": ["src/**/*.ts", "test/**/*.ts", "src/**/*.html"],
+                        "eslintConfig": "eslint.config.mjs"
                     }
                 }
             }

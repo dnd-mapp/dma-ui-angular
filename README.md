@@ -209,7 +209,7 @@ This command will typically start a development server and open Storybook in you
 
 ## Consuming the library
 
-Once published, the `dma-ui-angular` npm package can be installed and used in other Angular applications. For detailed instructions on installation, usage, and available components, please refer to the [README](libs/dma-ui-angular/README.md) of the library that is included in the package and in this repository.
+Once published, the `dma-ui-angular` npm package can be installed and used in other Angular applications. For detailed instructions on installation, usage, and available components, please refer to the [README](build/README.md) of the library that is included in the package and in this repository.
 
 ## Contributing
 
