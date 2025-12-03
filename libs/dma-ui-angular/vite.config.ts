@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import angular from '@analogjs/vite-plugin-angular';
+import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
@@ -13,14 +14,9 @@ export default defineConfig(() => ({
         allowOnly: !isCI,
         browser: {
             enabled: true,
-            instances: [
-                {
-                    browser: 'chromium',
-                    headless: true,
-                },
-            ],
-            name: 'chromium',
-            provider: 'playwright',
+            headless: true,
+            instances: [{ browser: 'chromium' }],
+            provider: playwright(),
         },
         clearMocks: true,
         coverage: {
