@@ -13,11 +13,11 @@ runs:
         - name: Setup Node.js
           uses: actions/setup-node@v5
           with:
-              cache: 'pnpm'
-              node-version-file: '.tool-versions'
-              cache-dependency-path: 'pnpm-lock.yaml'
-              scope: '@dnd-mapp'
-              registry-url: 'https://npm.pkg.github.com'
+              cache: "pnpm"
+              node-version-file: ".tool-versions"
+              cache-dependency-path: "pnpm-lock.yaml"
+              scope: "@dnd-mapp"
+              registry-url: "https://npm.pkg.github.com"
 
         - name: Install dependencies
           shell: bash
