@@ -67,6 +67,19 @@
                         "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
                     }
                 },
+                "test": {
+                    "builder": "@analogjs/vitest-angular:test",
+                    "options": {
+                        "configFile": "vite.config.mts"
+                    },
+                    "defaultConfiguration": "ci",
+                    "configurations": {
+                        "ci": {},
+                        "dev": {
+                            "watch": true
+                        }
+                    }
+                },
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
