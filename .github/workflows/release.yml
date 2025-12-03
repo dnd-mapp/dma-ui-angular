@@ -63,10 +63,8 @@ jobs:
                   prerelease_id="${{ inputs.prerelease-id }}"
 
                   if [ -z "$prerelease_id" ]; then
-                      pnpm version "$release_type" -w libs/dma-ui-angular --no-git-tag-version
                       pnpm version "$release_type" --no-git-tag-version
                   else
-                      pnpm version "$release_type" -w libs/dma-ui-angular --no-git-tag-version --preid "$prerelease_id"
                       pnpm version "$release_type" --no-git-tag-version --preid "$prerelease_id"
                   fi
 
@@ -162,4 +160,4 @@ jobs:
                       tag="latest"
                   fi
 
-                  pnpm run publish -- --tag "$tag"
+                  pnpm publish --tag "$tag"
