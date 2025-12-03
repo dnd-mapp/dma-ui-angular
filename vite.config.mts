@@ -1,8 +1,57 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
+import angular from '@analogjs/vite-plugin-angular';
+import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vite';
+import viteTsConfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig({
+const isCI = Boolean(process.env['CI']);
+
+const __dirname = import.meta.dirname;
+
+export default defineConfig(() => ({
+    cacheDir: '.vite/dma-ui-angular',
+    plugins: [angular(), viteTsConfigPaths()],
+    root: __dirname,
     test: {
-        projects: ['libs/**/vite.config.mts'],
+        allowOnly: !isCI,
+        browser: {
+            enabled: true,
+            headless: true,
+            instances: [{ browser: 'chromium' as const }],
+            provider: playwright(),
+            ui: true,
+        },
+        clearMocks: true,
+        coverage: {
+            clean: true,
+            cleanOnRerun: true,
+            enabled: true,
+            exclude: ['**/index.ts', 'src/stories/**/*', 'src/**/icons/**/*'],
+            include: ['src/**/*.ts'],
+            provider: 'v8' as const,
+            reporter: ['text-summary', 'html'],
+            reportOnFailure: true,
+            reportsDirectory: 'reports/coverage',
+            thresholds: {
+                branches: 80,
+                functions: 80,
+                lines: 80,
+                statements: 80,
+            },
+        },
+        globals: true,
+        include: ['src/**/*.spec.ts'],
+        name: 'dma-ui-angular',
+        open: false,
+        outputFile: 'reports/index.html',
+        passWithNoTests: true,
+        reporters: ['dot', 'html'],
+        setupFiles: ['test/setup-test.ts'],
+        sequence: {
+            shuffle: true,
+        },
+        slowTestThreshold: 300,
+        ui: !isCI,
+        uiBase: '/dma-ui-angular/',
     },
-});
+}));

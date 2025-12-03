@@ -1,9 +1,9 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "./tsconfig.json",
     "files": ["vite.config.mts"],
     "include": ["src/**/*.d.ts", "src/**/*.spec.ts", "test/**/*.ts"],
     "compilerOptions": {
-        "outDir": "../../out-tsc/spec",
+        "outDir": "out-tsc/spec",
         "types": ["node", "vitest/globals"]
     }
 }

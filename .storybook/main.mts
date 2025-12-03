@@ -7,7 +7,7 @@ function isResourceRule(rule: unknown): rule is RuleSetRule {
     );
 }
 
-const config = {
+const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|mjs|ts)'],
     addons: ['@storybook/addon-docs'],
     framework: {
@@ -26,6 +26,6 @@ const config = {
         });
         return config;
     },
-} satisfies StorybookConfig;
+};
 
 export default config;
