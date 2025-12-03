@@ -1,11 +1,9 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
     "extends": "../../tsconfig.json",
+    "files": ["vite.config.mts"],
     "include": ["src/**/*.d.ts", "src/**/*.spec.ts", "test/**/*.ts"],
     "compilerOptions": {
         "outDir": "../../out-tsc/spec",
-        "target": "ES2016",
         "types": ["node", "vitest/globals"]
     }
 }

@@ -3,7 +3,8 @@
     "version": 1,
     "cli": {
         "analytics": "a888cfd9-a542-4e54-ba23-b2a73f08912a",
-        "schematicCollections": ["angular-eslint"]
+        "schematicCollections": ["angular-eslint"],
+        "packageManager": "pnpm"
     },
     "schematics": {
         "@schematics/angular:component": {
@@ -64,6 +65,19 @@
                         "sslKey": "certificate-key.pem",
                         "styles": ["libs/dma-ui-angular/.storybook/styles.scss"],
                         "tsConfig": "libs/dma-ui-angular/.storybook/tsconfig.json"
+                    }
+                },
+                "test": {
+                    "builder": "@analogjs/vitest-angular:test",
+                    "options": {
+                        "configFile": "vite.config.mts"
+                    },
+                    "defaultConfiguration": "ci",
+                    "configurations": {
+                        "ci": {},
+                        "dev": {
+                            "watch": true
+                        }
                     }
                 },
                 "lint": {
