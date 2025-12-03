@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 import angular from '@analogjs/vite-plugin-angular';
 import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vite';
@@ -17,8 +17,9 @@ export default defineConfig(() => ({
         browser: {
             enabled: true,
             headless: true,
-            instances: [{ browser: 'chromium' }],
+            instances: [{ browser: 'chromium' as const }],
             provider: playwright(),
+            ui: true,
         },
         clearMocks: true,
         coverage: {
@@ -42,8 +43,9 @@ export default defineConfig(() => ({
         include: ['src/**/*.spec.ts'],
         name: 'dma-ui-angular',
         open: false,
+        outputFile: 'reports/index.html',
         passWithNoTests: true,
-        reporters: ['dot', ['html', { outputFile: 'reports/index.html' }]],
+        reporters: ['dot', 'html'],
         setupFiles: ['test/setup-test.ts'],
         sequence: {
             shuffle: true,
