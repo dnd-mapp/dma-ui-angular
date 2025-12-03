@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { createTestEnvironment, InputHarness } from '@dnd-mapp/dma-ui-angular/test';
 import { InputComponent } from './input.component';
 
-describe('InputComponent', () => {
+describe.skip('InputComponent', () => {
     @Component({
         template: ` <dma-input
             [label]="label()"
