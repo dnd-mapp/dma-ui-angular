@@ -1,7 +1,7 @@
 import { ComponentHarness, HarnessLoader, HarnessQuery } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Type } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, getTestBed } from '@angular/core/testing';
 
 export interface CreateTestEnvironmentParams<Component = unknown, Harness extends ComponentHarness = null> {
     testComponent?: Type<Component>;
@@ -13,7 +13,7 @@ export interface CreateTestEnvironmentParams<Component = unknown, Harness extend
 export async function createTestEnvironment<Component = unknown, Harness extends ComponentHarness = null>(
     params: CreateTestEnvironmentParams<Component, Harness>,
 ) {
-    TestBed.configureTestingModule({
+    getTestBed().configureTestingModule({
         imports: [...(params.testComponent ? [params.testComponent] : []), ...(params.imports ? params.imports : [])],
         providers: [...(params.providers ? params.providers : [])],
         animationsEnabled: true,
@@ -24,7 +24,7 @@ export async function createTestEnvironment<Component = unknown, Harness extends
     let harness: Harness;
 
     if (params.testComponent && params.harness) {
-        fixture = TestBed.createComponent(params.testComponent);
+        fixture = getTestBed().createComponent(params.testComponent);
         harnessLoader = TestbedHarnessEnvironment.loader(fixture);
 
         harness = await harnessLoader.getHarness(params.harness);
