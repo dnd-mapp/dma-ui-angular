@@ -11,14 +11,14 @@ import { storyWrapper } from '../story-wrapper';
 })
 class LeadingIconButtonStoryComponent {}
 
-const metadata = {
+const metadata: Meta<LeadingIconButtonStoryComponent> = {
     component: LeadingIconButtonStoryComponent,
     decorators: [storyWrapper()],
     title: 'Button/Icons',
-} satisfies Meta<LeadingIconButtonStoryComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<LeadingIconButtonStoryComponent>;
 
-export const LeadingIcon = {} satisfies Story;
+export const LeadingIcon: Story = {};

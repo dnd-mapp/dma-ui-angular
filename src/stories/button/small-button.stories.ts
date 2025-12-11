@@ -11,14 +11,14 @@ import { storyWrapper } from '../story-wrapper';
 })
 class SmallButtonStoryComponent {}
 
-const metadata = {
+const metadata: Meta<SmallButtonStoryComponent> = {
     component: SmallButtonStoryComponent,
     decorators: [storyWrapper()],
     title: 'Button',
-} satisfies Meta<SmallButtonStoryComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<SmallButtonStoryComponent>;
 
-export const Small = {} satisfies Story;
+export const Small: Story = {};

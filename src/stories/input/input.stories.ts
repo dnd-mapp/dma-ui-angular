@@ -2,7 +2,7 @@ import { InputComponent } from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
-const metadata = {
+const metadata: Meta<InputComponent> = {
     args: {
         label: 'My label',
         hideLabel: false,
@@ -75,10 +75,10 @@ const metadata = {
     component: InputComponent,
     decorators: [storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
-} satisfies Meta<InputComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<InputComponent>;
 
-export const Default = {} satisfies Story;
+export const Default: Story = {};

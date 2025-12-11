@@ -1,8 +1,8 @@
 import { CheckboxComponent } from '@dnd-mapp/dma-ui-angular';
-import { Meta, StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import { storyWrapper } from '../story-wrapper';
 
-const metadata = {
+const metadata: Meta<CheckboxComponent> = {
     args: {
         label: 'My checkbox',
         value: undefined as string,
@@ -21,10 +21,10 @@ const metadata = {
         },
     }),
     title: 'Checkbox',
-} satisfies Meta<CheckboxComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<CheckboxComponent>;
 
-export const Default = {} satisfies Story;
+export const Default: Story = {};

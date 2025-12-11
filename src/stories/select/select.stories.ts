@@ -2,7 +2,7 @@ import { OptionComponent, SelectComponent } from '@dnd-mapp/dma-ui-angular';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { StoryPositions, storyWrapper } from '../story-wrapper';
 
-const metadata = {
+const metadata: Meta<SelectComponent> = {
     component: SelectComponent,
     decorators: [
         storyWrapper({ height: 20, position: StoryPositions.CENTER }),
@@ -22,10 +22,10 @@ const metadata = {
             </dma-select>
         `,
     }),
-} satisfies Meta<SelectComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<SelectComponent>;
 
-export const Default = {} satisfies Story;
+export const Default: Story = {};

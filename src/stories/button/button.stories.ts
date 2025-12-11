@@ -8,7 +8,7 @@ type StoryComponent = ButtonComponent & {
     disabled: boolean;
 };
 
-const metadata = {
+const metadata: Meta<StoryComponent> = {
     args: {
         disabled: false,
         label: 'My Button',
@@ -69,28 +69,28 @@ const metadata = {
         template: `<button dma-button="${type}" size="${size}" ${disabled ? 'disabled' : ''}>${label}</button>`,
     }),
     title: 'Button',
-} satisfies Meta<StoryComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<StoryComponent>;
 
-export const Primary = {
+export const Primary: Story = {
     args: {
         type: ButtonTypes.PRIMARY,
     },
-} satisfies Story;
+};
 
-export const Secondary = {
+export const Secondary: Story = {
     args: {
         type: ButtonTypes.SECONDARY,
     },
-} satisfies Story;
+};
 
-export const Danger = {
+export const Danger: Story = {
     args: {
         type: ButtonTypes.DANGER,
     },
-} satisfies Story;
+};
 
-export const Text = {} satisfies Story;
+export const Text: Story = {};
