@@ -45,7 +45,7 @@ class InputReactiveFormStoryComponent {
     }
 }
 
-const metadata = {
+const metadata: Meta<InputReactiveFormStoryComponent> = {
     args: {
         disabled: false,
         value: undefined as string,
@@ -58,12 +58,12 @@ const metadata = {
         },
     },
     component: InputReactiveFormStoryComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
-} satisfies Meta<InputReactiveFormStoryComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<InputReactiveFormStoryComponent>;
 
-export const ReactiveForms = {} satisfies Story;
+export const ReactiveForms: Story = {};

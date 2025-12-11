@@ -1,4 +1,5 @@
-import { componentWrapperDecorator } from '@storybook/angular';
+import { ThemeDirective } from '@dnd-mapp/dma-ui-angular';
+import { Decorator, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 
 export const StoryPositions = {
     TOP_START: 'top-start',
@@ -23,10 +24,14 @@ const DEFAULT_STORY_WRAPPER_CONFIG: StoryWrapperConfig = {
     position: StoryPositions.CENTER,
 };
 
-export function storyWrapper(config: StoryWrapperConfig = DEFAULT_STORY_WRAPPER_CONFIG) {
+export function storyWrapper(config: StoryWrapperConfig = DEFAULT_STORY_WRAPPER_CONFIG): Decorator[] {
     const heightStyle = Number.isNaN(config.height) ? 'unset' : config.height;
 
-    return componentWrapperDecorator(
-        (story) => `<div class="dma-surface ${config.position}" [style.height.em]="${heightStyle}">${story}</div>`,
-    );
+    return [
+        moduleMetadata({ imports: [ThemeDirective] }),
+        componentWrapperDecorator(
+            (story) =>
+                `<div class="dma-surface ${config.position}" dmaTheme [style.height.em]="${heightStyle}">${story}</div>`,
+        ),
+    ];
 }

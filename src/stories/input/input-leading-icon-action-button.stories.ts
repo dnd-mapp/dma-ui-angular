@@ -18,17 +18,17 @@ class InputLeadingIconActionButtonStoryComponent {
     public readonly disabled = input(false);
 }
 
-const metadata = {
+const metadata: Meta<InputLeadingIconActionButtonStoryComponent> = {
     args: {
         disabled: false,
     },
     component: InputLeadingIconActionButtonStoryComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
-} satisfies Meta<InputLeadingIconActionButtonStoryComponent>;
+};
 
 export default metadata;
 
 type Story = StoryObj<InputLeadingIconActionButtonStoryComponent>;
 
-export const LeadingIconWithActionButton = {} satisfies Story;
+export const LeadingIconWithActionButton: Story = {};

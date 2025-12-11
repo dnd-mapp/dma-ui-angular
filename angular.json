@@ -15,6 +15,10 @@
         "@schematics/angular:directive": {
             "flat": false,
             "type": "directive"
+        },
+        "@schematics/angular:service": {
+            "addTypeToClassName": true,
+            "type": "service"
         }
     },
     "projects": {
@@ -65,19 +69,6 @@
                         "sslKey": "certificate-key.pem",
                         "styles": [".storybook/styles.scss"],
                         "tsConfig": ".storybook/tsconfig.json"
-                    }
-                },
-                "test": {
-                    "builder": "@analogjs/vitest-angular:test",
-                    "options": {
-                        "configFile": "vite.config.mts"
-                    },
-                    "defaultConfiguration": "ci",
-                    "configurations": {
-                        "ci": {},
-                        "dev": {
-                            "watch": true
-                        }
                     }
                 },
                 "lint": {
