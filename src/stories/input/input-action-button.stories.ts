@@ -18,7 +18,7 @@ const metadata: Meta<InputActionButtonStoryComponent> = {
         disabled: false,
     },
     component: InputActionButtonStoryComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
 };
 

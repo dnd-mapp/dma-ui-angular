@@ -73,7 +73,7 @@ const metadata: Meta<InputComponent> = {
         },
     },
     component: InputComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
 };
 

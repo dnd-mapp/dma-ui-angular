@@ -63,7 +63,7 @@ const metadata: Meta<StoryComponent> = {
         },
     },
     component: ButtonComponent,
-    decorators: [storyWrapper()],
+    decorators: [...storyWrapper()],
     render: ({ label, disabled, size, type, ...args }) => ({
         props: args,
         template: `<button dma-button="${type}" size="${size}" ${disabled ? 'disabled' : ''}>${label}</button>`,

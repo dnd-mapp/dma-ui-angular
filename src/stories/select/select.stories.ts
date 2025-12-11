@@ -5,7 +5,7 @@ import { StoryPositions, storyWrapper } from '../story-wrapper';
 const metadata: Meta<SelectComponent> = {
     component: SelectComponent,
     decorators: [
-        storyWrapper({ height: 20, position: StoryPositions.CENTER }),
+        ...storyWrapper({ height: 20, position: StoryPositions.CENTER }),
         moduleMetadata({
             imports: [SelectComponent, OptionComponent],
         }),

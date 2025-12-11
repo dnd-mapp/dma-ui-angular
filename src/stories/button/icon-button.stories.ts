@@ -14,7 +14,7 @@ class IconButtonStoryComponent {}
 const metadata: Meta<IconButtonStoryComponent> = {
     component: IconButtonStoryComponent,
     decorators: [
-        storyWrapper(),
+        ...storyWrapper(),
         applicationConfig({
             providers: [provideTooltipConfig()],
         }),

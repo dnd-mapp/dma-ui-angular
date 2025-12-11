@@ -58,7 +58,7 @@ const metadata: Meta<InputReactiveFormStoryComponent> = {
         },
     },
     component: InputReactiveFormStoryComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
 };
 

@@ -12,7 +12,7 @@ const metadata: Meta<CheckboxComponent> = {
     },
     argTypes: {},
     component: CheckboxComponent,
-    decorators: [storyWrapper()],
+    decorators: [...storyWrapper()],
     render: (args, { updateArgs }) => ({
         props: {
             ...args,

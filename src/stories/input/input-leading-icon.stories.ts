@@ -18,7 +18,7 @@ const metadata: Meta<InputLeadingIconStoryComponent> = {
         disabled: false,
     },
     component: InputLeadingIconStoryComponent,
-    decorators: [storyWrapper({ position: 'top-start' })],
+    decorators: [...storyWrapper({ position: 'top-start' })],
     title: 'Input/Text Input',
 };
 

@@ -13,7 +13,7 @@ class SmallButtonStoryComponent {}
 
 const metadata: Meta<SmallButtonStoryComponent> = {
     component: SmallButtonStoryComponent,
-    decorators: [storyWrapper()],
+    decorators: [...storyWrapper()],
     title: 'Button',
 };
 

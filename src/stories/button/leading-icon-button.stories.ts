@@ -13,7 +13,7 @@ class LeadingIconButtonStoryComponent {}
 
 const metadata: Meta<LeadingIconButtonStoryComponent> = {
     component: LeadingIconButtonStoryComponent,
-    decorators: [storyWrapper()],
+    decorators: [...storyWrapper()],
     title: 'Button/Icons',
 };
 

@@ -13,7 +13,7 @@ class TrailingIconButtonStoryComponent {}
 
 const metadata: Meta<TrailingIconButtonStoryComponent> = {
     component: TrailingIconButtonStoryComponent,
-    decorators: [storyWrapper()],
+    decorators: [...storyWrapper()],
     title: 'Button/Icons',
 };
 

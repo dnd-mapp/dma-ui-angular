@@ -4,6 +4,8 @@ $font-size: var(--font-size, 100%);
 $fw-regular: var(--fw-regular, 400);
 $fw-bold: var(--fw-bold, 500);
 
+$border-color: var(--border-color, oklch(0.75 0 0));
+
 $background: var(--background, oklch(1 0 0));
 $on-background: var(--on-background, oklch(0.1 0 0));
 
@@ -12,8 +14,6 @@ $on-surface: var(--on-surface, oklch(0.1 0 0));
 
 $inverse-surface: var(--surface, oklch(0.3 0 0));
 $on-inverse-surface: var(--on-surface, oklch(0.95 0 0));
-
-$border-color: var(--border-color, oklch(0.75 0 0));
 
 $primary: var(--primary, oklch(0.6 0.2 250));
 $on-primary: var(--on-primary, oklch(0.98 0 0));
