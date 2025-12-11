@@ -28,10 +28,11 @@ export async function createTestEnvironment<Component = unknown, Harness extends
     let harnessLoader: HarnessLoader;
     let harness: Harness;
 
-    if (params.testComponent && params.harness) {
+    if (params.testComponent) {
         fixture = getTestBed().createComponent(params.testComponent);
+    }
+    if (params.harness) {
         harnessLoader = TestbedHarnessEnvironment.loader(fixture);
-
         harness = await harnessLoader.getHarness(params.harness);
     }
     return {
