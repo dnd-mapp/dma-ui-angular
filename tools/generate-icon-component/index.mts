@@ -5,7 +5,7 @@ import { JSDOM } from 'jsdom';
 import { join } from 'path';
 import { format } from 'prettier';
 
-const BASE_ICON_PATH = 'libs/dma-ui-angular/src/lib/icons';
+const BASE_ICON_PATH = 'src/lib/icons';
 
 const TOOL_BASE_PATH = 'tools/generate-icon-component';
 const TEMPLATE_FILE_NAME = 'component-template';
