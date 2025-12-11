@@ -1,6 +1,11 @@
-import { ButtonComponent, ButtonTypes, DEFAULT_BUTTON_TYPE } from '@dnd-mapp/dma-ui-angular';
+import {
+    ButtonComponent,
+    ButtonSizes,
+    ButtonTypes,
+    DEFAULT_BUTTON_SIZE,
+    DEFAULT_BUTTON_TYPE,
+} from '@dnd-mapp/dma-ui-angular';
 import { Meta, StoryObj } from '@storybook/angular';
-import { ButtonSizes, DEFAULT_BUTTON_SIZE } from '../../lib/button/button-size';
 import { storyWrapper } from '../story-wrapper';
 
 type StoryComponent = ButtonComponent & {
