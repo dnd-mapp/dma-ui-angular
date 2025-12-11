@@ -20,7 +20,7 @@
     "test": "pnpm exec vitest run",
     "test:dev": "pnpm exec vitest",
     "test:install-browser": "pnpm exec playwright install chromium",
-    "test:coverage-reports": "pnpm exec vite preview --outDir reports",
+    "test:coverage-reports": "pnpm exec vite preview --outDir reports --open",
     "lint": "pnpm exec ng lint",
     "format:check": "pnpm exec prettier -l .",
     "format:write": "pnpm exec prettier -w .",
